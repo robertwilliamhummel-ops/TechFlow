@@ -4,6 +4,7 @@ import Hero from '@/components/Hero'
 import FadeUp from '@/components/animations/FadeUp'
 import StaggerGrid from '@/components/animations/StaggerGrid'
 import CursorGlow from '@/components/animations/CursorGlow'
+import SlideReveal from '@/components/animations/SlideReveal'
 import Accordion from '@/components/Accordion'
 
 export const metadata: Metadata = {
@@ -110,7 +111,7 @@ export default function DigitalGrowthPage() {
       {/* Process Accordion */}
       <section className="page-section page-section--dark">
         <div className="container">
-          <FadeUp>
+          <SlideReveal direction="left" duration={700}>
             <div className="accordion-container">
               <Accordion title="Technical Implementation Process (How We Support Your Project)">
                 <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:'1.5rem', padding:'1rem 2rem 0' }}>
@@ -125,14 +126,14 @@ export default function DigitalGrowthPage() {
                 </div>
               </Accordion>
             </div>
-          </FadeUp>
+          </SlideReveal>
         </div>
       </section>
 
       {/* FAQ Accordion */}
       <section className="page-section" style={{ background:'rgba(0,0,0,0.3)' }}>
         <div className="container">
-          <FadeUp>
+          <SlideReveal direction="right" duration={700}>
             <div className="accordion-container">
               <Accordion title="Common Questions About Digital Growth (6 Technical Answers)">
                 <div style={{ padding:'0 2rem 0.5rem' }}>
@@ -145,7 +146,7 @@ export default function DigitalGrowthPage() {
                 </div>
               </Accordion>
             </div>
-          </FadeUp>
+          </SlideReveal>
         </div>
       </section>
 

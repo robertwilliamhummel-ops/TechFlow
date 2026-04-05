@@ -4,6 +4,7 @@ import Hero from '@/components/Hero'
 import FadeUp from '@/components/animations/FadeUp'
 import StaggerGrid from '@/components/animations/StaggerGrid'
 import CursorGlow from '@/components/animations/CursorGlow'
+import SlideReveal from '@/components/animations/SlideReveal'
 import ContactForm from '@/components/ContactForm'
 import FAQItem from '@/components/FAQItem'
 
@@ -137,7 +138,7 @@ export default function ContactPage() {
             <p>Professional IT services, business automation, and website design across the Greater Toronto Area</p>
           </div></FadeUp>
           <div className="service-area-content">
-            <FadeUp duration={700}>
+            <SlideReveal direction="left" duration={700}>
               <div className="area-map">
                 <div className="map-container">
                   <div className="coverage-summary">
@@ -172,8 +173,8 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-            </FadeUp>
-            <FadeUp delay={200} duration={700}>
+            </SlideReveal>
+            <SlideReveal direction="right" duration={700} delay={150}>
               <div className="area-details">
                 <h3>Primary Service Areas</h3>
                 <div className="cities-grid">
@@ -190,7 +191,7 @@ export default function ContactPage() {
                   ))}
                 </div>
               </div>
-            </FadeUp>
+            </SlideReveal>
           </div>
         </div>
       </section>
