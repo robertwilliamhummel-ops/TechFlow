@@ -187,7 +187,7 @@ export default function HomePage() {
               <a href="tel:+16475728341" className="btn btn-outline btn-large"><i className="fas fa-phone" /> Call (647) 572-8341</a>
             </div>
             <div className="cta-features">
-              <div className="cta-feature"><i className="fas fa-chart-line" /><span>SEO Optimization</span></div>
+              <div className="cta-feature"><i className="fas fa-laptop-code" /><span>Website Design</span></div>
               <div className="cta-feature"><i className="fas fa-cogs" /><span>Business Automation</span></div>
               <div className="cta-feature"><i className="fas fa-server" /><span>Business IT Support</span></div>
             </div>
