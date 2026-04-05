@@ -39,9 +39,12 @@ export default function FormSuccessBurst({ trigger, origin }: FormSuccessBurstPr
     canvas.width  = window.innerWidth
     canvas.height = window.innerHeight
 
-    // Use the pre-captured origin (measured before layout changed), fallback to centre
-    const cx = origin?.x ?? canvas.width  / 2
-    const cy = origin?.y ?? canvas.height / 2
+    // Use the pre-captured origin (measured before layout changed), fallback to centre.
+    // Cap cy so the burst never fires from the bottom third of the viewport —
+    // particles going downward would exit immediately and the effect looks like
+    // a fountain instead of a full radial explosion.
+    const cx =                 origin?.x ?? canvas.width  / 2
+    const cy = Math.min(origin?.y ?? canvas.height / 2, canvas.height * 0.70)
 
     const particles: Particle[] = Array.from({ length: PARTICLE_COUNT }, () => {
       const angle = Math.random() * Math.PI * 2
