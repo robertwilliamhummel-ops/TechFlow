@@ -5,7 +5,6 @@ import FadeUp from '@/components/animations/FadeUp'
 import StaggerGrid from '@/components/animations/StaggerGrid'
 import SlideReveal from '@/components/animations/SlideReveal'
 import CursorGlow from '@/components/animations/CursorGlow'
-import CounterNumber from '@/components/animations/CounterNumber'
 
 export const metadata: Metadata = {
   title: 'Business Automation Solutions Toronto | TechFlow Solutions',
@@ -83,21 +82,6 @@ export default function BusinessAutomationPage() {
             <div className="hero-cta">
               <Link href="/contact" className="btn-hero btn-hero-primary"><i className="fas fa-calendar-check" /> Request Automation Consultation</Link>
               <a href="tel:+16475728341" className="btn-hero btn-hero-secondary"><i className="fas fa-phone" /> Call (647) 572-8341</a>
-            </div>
-          </FadeUp>
-          <FadeUp delay={800}>
-            <div className="stats-row">
-              {[
-                { target: 15,  suffix: '+', label: 'Years Engineering' },
-                { target: 40,  suffix: '+', label: 'Hours Saved / Week' },
-                { target: 100, suffix: '%', label: 'Custom Built' },
-                { target: 5,   suffix: '+', label: 'Automation Types' },
-              ].map((s) => (
-                <div key={s.label} className="stat-block">
-                  <span className="stat-number"><CounterNumber target={s.target} suffix={s.suffix} /></span>
-                  <span className="stat-label">{s.label}</span>
-                </div>
-              ))}
             </div>
           </FadeUp>
         </div>

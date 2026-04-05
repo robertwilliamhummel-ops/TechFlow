@@ -5,7 +5,6 @@ import FadeUp from '@/components/animations/FadeUp'
 import StaggerGrid from '@/components/animations/StaggerGrid'
 import SlideReveal from '@/components/animations/SlideReveal'
 import CursorGlow from '@/components/animations/CursorGlow'
-import CounterNumber from '@/components/animations/CounterNumber'
 
 export const metadata: Metadata = {
   title: 'TechFlow Solutions | IT Services & Business Automation in Toronto',
@@ -26,12 +25,6 @@ const heroImages = [
   '/images/heroes/hero-home-5.png',
 ]
 
-const stats = [
-  { target: 15,  suffix: '+',  label: 'Years Experience' },
-  { target: 200, suffix: '+',  label: 'Businesses Helped' },
-  { target: 98,  suffix: '%',  label: 'Client Satisfaction' },
-  { target: 7,   suffix: '/7', label: 'Days a Week' },
-]
 
 export default function HomePage() {
   return (
@@ -81,18 +74,6 @@ export default function HomePage() {
             </div>
           </FadeUp>
 
-          <FadeUp delay={1000} duration={700}>
-            <div className="stats-row">
-              {stats.map((s) => (
-                <div key={s.label} className="stat-block">
-                  <span className="stat-number">
-                    <CounterNumber target={s.target} suffix={s.suffix} duration={2000} />
-                  </span>
-                  <span className="stat-label">{s.label}</span>
-                </div>
-              ))}
-            </div>
-          </FadeUp>
         </div>
       </Hero>
 
