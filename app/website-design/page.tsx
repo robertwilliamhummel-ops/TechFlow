@@ -108,20 +108,22 @@ export default function WebsiteDesignPage() {
             <h2>Website Packages</h2>
             <p>Every project starts with a free consultation — no obligation, no pressure.</p>
           </div></FadeUp>
-          <StaggerGrid style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:'2rem', maxWidth:1200, margin:'0 auto' }} staggerDelay={120} initialDelay={100}>
+          <StaggerGrid className="pricing-grid-rs" staggerDelay={120} initialDelay={100}>
             {packages.map((pkg) => (
-              <CursorGlow key={pkg.name} className="service-card" style={{ position:'relative', ...(pkg.primary ? { border:'2px solid rgba(102,126,234,0.6)', boxShadow:'0 20px 60px rgba(102,126,234,0.25)' } : {}) }}>
-                {pkg.badge && (
-                  <div style={{ position:'absolute', top:'-14px', left:'50%', transform:'translateX(-50%)', background:'linear-gradient(135deg,#667eea,#764ba2)', color:'#fff', padding:'0.3rem 1.2rem', borderRadius:20, fontSize:'0.8rem', fontWeight:700, whiteSpace:'nowrap' }}>{pkg.badge}</div>
-                )}
-                <div style={{ marginBottom:'1.5rem' }}>
-                  <h3 style={{ color:'#fff', fontSize:'1.4rem', marginBottom:'0.5rem' }}>{pkg.name}</h3>
-                  <div style={{ fontSize:'clamp(1.6rem,3vw,2rem)', fontWeight:800, background:'linear-gradient(135deg,#667eea,#f093fb)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text', marginBottom:'0.5rem', fontFamily:'Poppins,sans-serif' }}>{pkg.price}</div>
-                  <p style={{ color:'rgba(255,255,255,0.6)', fontSize:'0.9rem', margin:0 }}>{pkg.desc}</p>
+              <div key={pkg.name} className={`pricing-card-glass${pkg.primary ? ' featured' : ''}`}>
+                {pkg.badge && <div className="featured-ribbon">{pkg.badge}</div>}
+                <div className="pricing-header-glass">
+                  <h3>{pkg.name}</h3>
+                  <div className="price-display">
+                    <span className="price-string">{pkg.price}</span>
+                  </div>
+                  <p>{pkg.desc}</p>
                 </div>
-                <ul className="service-features" style={{ marginBottom:'1.5rem' }}>{pkg.features.map((f) => <li key={f}>{f}</li>)}</ul>
+                <ul className="pricing-features-list">
+                  {pkg.features.map((f) => <li key={f}><i className="fas fa-check" />{f}</li>)}
+                </ul>
                 <a href="#contact-form" className={`btn ${pkg.primary ? 'btn-primary' : 'btn-secondary'}`} style={{ width:'100%', justifyContent:'center' }}>Get Started</a>
-              </CursorGlow>
+              </div>
             ))}
           </StaggerGrid>
         </div>
