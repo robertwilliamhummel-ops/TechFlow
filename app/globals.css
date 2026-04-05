@@ -673,13 +673,13 @@ a:hover { color: var(--secondary-purple); }
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
   border-color: rgba(102,126,234,0.5);
   box-shadow: 0 20px 60px rgba(102,126,234,0.3);
 }
 
 .service-card.animate-in:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 }
 
 .service-card:hover::before { opacity: 1; }
@@ -833,12 +833,12 @@ a:hover { color: var(--secondary-purple); }
 }
 
 .testimonial-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
   border-color: rgba(102,126,234,0.5);
   box-shadow: 0 20px 60px rgba(102,126,234,0.3);
 }
 
-.testimonial-card.animate-in:hover { transform: translateY(-10px); }
+.testimonial-card.animate-in:hover { transform: translateY(-6px); }
 .testimonial-rating { color: #ffd700; margin-bottom: 1rem; font-size: 1.2rem; }
 .testimonial-text { color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 1.5rem; font-style: italic; }
 .author-info h4 { color: #fff; margin-bottom: 0.25rem; }
@@ -1171,7 +1171,8 @@ a:hover { color: var(--secondary-purple); }
 
 .cities-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 
-.city-group { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; }
+.city-group { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; transition: transform 0.3s ease, border-color 0.3s ease; }
+.city-group:hover { transform: translateY(-6px); border-color: rgba(102,126,234,0.4); }
 .city-group h4 { color: #fff; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
 .city-group h4 i { color: var(--primary-purple); }
 .city-group ul { list-style: none; padding: 0; }
@@ -1254,7 +1255,7 @@ a:hover { color: var(--secondary-purple); }
 }
 
 .value-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: rgba(102,126,234,0.5);
   box-shadow: 0 20px 60px rgba(102,126,234,0.2);
 }
