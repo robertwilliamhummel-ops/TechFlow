@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: '%s | TechFlow Solutions',
   },
   description:
-    'IT services and business automation for Toronto businesses. Custom workflow automation, invoicing systems, and professional websites backed by 15+ years of IT engineering experience.',
+    'IT services and business automation for Toronto businesses. Custom automation, professional websites, and IT support backed by 15+ years of engineering experience.',
   keywords: [
     'IT services Toronto',
     'business automation Toronto',

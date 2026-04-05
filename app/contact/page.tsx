@@ -10,7 +10,7 @@ import FAQItem from '@/components/FAQItem'
 
 export const metadata: Metadata = {
   title: 'Contact TechFlow Solutions | Toronto IT Services & Business Automation — (647) 572-8341',
-  description: 'Contact TechFlow Solutions for IT services, business automation, or professional website design in Toronto. Call (647) 572-8341 or send a message.',
+  description: 'Contact TechFlow Solutions for IT services, business automation, or website design in Toronto. Call (647) 572-8341 or send a message.',
   alternates: { canonical: 'https://techflowsolutions.ca/contact' },
   openGraph: {
     title: 'Contact TechFlow Solutions',

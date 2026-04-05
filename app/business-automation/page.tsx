@@ -8,7 +8,7 @@ import CursorGlow from '@/components/animations/CursorGlow'
 
 export const metadata: Metadata = {
   title: 'Business Automation Solutions Toronto | TechFlow Solutions',
-  description: 'Custom business automation tools for Toronto companies. Invoicing systems, workflow automation, payment processing, and client portals built by 15+ year IT engineers.',
+  description: 'Custom business automation for Toronto companies. Invoicing systems, workflow automation, payment processing, and client portals built to match your exact workflow.',
   alternates: { canonical: 'https://techflowsolutions.ca/business-automation' },
   openGraph: {
     title: 'Business Automation Solutions Toronto | TechFlow Solutions',

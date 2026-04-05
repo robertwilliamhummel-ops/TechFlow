@@ -8,7 +8,7 @@ import CursorGlow from '@/components/animations/CursorGlow'
 
 export const metadata: Metadata = {
   title: 'IT Services Toronto | Business IT Support | TechFlow Solutions',
-  description: 'Professional IT services for Toronto businesses. Network setup, cloud hosting, managed IT support, workstation configuration, and cybersecurity from 15+ year IT engineers.',
+  description: 'Professional IT services for Toronto businesses. Network setup, cloud hosting, managed IT support, workstation configuration, and cybersecurity solutions.',
   alternates: { canonical: 'https://techflowsolutions.ca/it-services' },
   openGraph: {
     title: 'IT Services Toronto | Business IT Support | TechFlow Solutions',

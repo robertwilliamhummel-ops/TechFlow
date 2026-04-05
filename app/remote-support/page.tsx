@@ -9,7 +9,7 @@ import FAQItem from '@/components/FAQItem'
 
 export const metadata: Metadata = {
   title: 'Remote IT Support Toronto | Fast & Secure Assistance | TechFlow Solutions',
-  description: 'Fast, secure remote IT support for Toronto businesses. Self-hosted, encrypted troubleshooting, software fixes, and technical assistance without the wait or travel fees.',
+  description: 'Fast, secure remote IT support for Toronto businesses. Encrypted troubleshooting, software fixes, and technical assistance without the wait or travel fees.',
   alternates: { canonical: 'https://techflowsolutions.ca/remote-support' },
   openGraph: {
     title: 'Remote IT Support Toronto | Fast & Secure Assistance | TechFlow Solutions',

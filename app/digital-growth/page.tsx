@@ -9,7 +9,7 @@ import Accordion from '@/components/Accordion'
 
 export const metadata: Metadata = {
   title: 'Digital Growth & Search Visibility Toronto | TechFlow Solutions',
-  description: 'Digital growth and technical SEO support for Toronto businesses. Performance optimization, search visibility, and technical improvements included with website, IT, and automation projects.',
+  description: 'Technical SEO and digital growth for Toronto businesses. Performance optimization and search visibility included with website, IT, and automation projects.',
   alternates: { canonical: 'https://techflowsolutions.ca/digital-growth' },
   openGraph: {
     title: 'Digital Growth & Search Visibility Toronto | TechFlow Solutions',

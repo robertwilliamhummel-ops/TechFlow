@@ -8,7 +8,7 @@ import CursorGlow from '@/components/animations/CursorGlow'
 
 export const metadata: Metadata = {
   title: 'About Rob | Toronto IT Engineer & Business Automation Expert | TechFlow Solutions',
-  description: 'Meet Rob — founder of TechFlow Solutions. 15+ years of IT engineering experience helping Toronto businesses build reliable technology systems, business automation, and professional websites.',
+  description: 'Meet Rob, founder of TechFlow Solutions. 15+ years of IT engineering helping Toronto businesses with reliable technology, automation, and professional websites.',
   alternates: { canonical: 'https://techflowsolutions.ca/about' },
   openGraph: {
     title: 'About TechFlow Solutions',
