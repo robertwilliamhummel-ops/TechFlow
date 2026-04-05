@@ -1420,77 +1420,89 @@ a:hover { color: var(--secondary-purple); }
 .accordion-content ul { padding-left: 3rem; }
 .accordion-content li { margin-bottom: 0.5rem; }
 
-/* Notification */
-.notification {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  background: var(--bg-dark);
-  color: var(--text-primary);
-  border-radius: 12px;
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3);
-  padding: 24px;
-  transition: all 0.3s ease-out;
-  z-index: 10000;
-  max-width: 90vw;
-  width: 400px;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.notification.show {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
-
-.notification-success {
-  border: 3px solid #10b981;
-  background: linear-gradient(135deg, var(--bg-dark) 0%, rgba(16,185,129,0.1) 100%);
-}
-
-.notification-error {
-  border: 3px solid #ef4444;
-  background: linear-gradient(135deg, var(--bg-dark) 0%, rgba(239,68,68,0.1) 100%);
-}
-
-.notification-content {
+/* ===================================
+   FORM SUCCESS STATE (inline replacement)
+   =================================== */
+.form-success-state {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  animation: successFadeIn 0.5s ease-out forwards;
 }
 
-.notification-message { font-size: 1.1rem; font-weight: 600; line-height: 1.5; color: var(--text-primary); }
+@keyframes successFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
-.notification-close {
-  background: var(--primary-gradient);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 600;
+.form-success-icon {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.75rem;
+  box-shadow: 0 0 50px rgba(102,126,234,0.45);
+  animation: successPop 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes successPop {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.form-success-icon i { font-size: 2.6rem; color: #fff; }
+
+.form-success-state h3 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: #fff;
+  margin-bottom: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.form-success-state > p {
+  color: rgba(255,255,255,0.75);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 420px;
+  margin: 0 auto 2.25rem;
+}
+
+.form-success-reset {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.55);
+  border-radius: 50px;
+  padding: 0.6rem 1.6rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: all 0.25s ease;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.01em;
 }
 
-.notification-close:hover { opacity: 0.9; }
-
-.notification-success .notification-content::before {
-  content: '✓';
-  display: block;
-  font-size: 3rem;
-  color: #10b981;
+.form-success-reset:hover {
+  border-color: rgba(102,126,234,0.6);
+  color: #fff;
+  background: rgba(102,126,234,0.12);
 }
 
-.notification-error .notification-content::before {
-  content: '⚠';
-  display: block;
-  font-size: 3rem;
+/* Inline submit error (replaces modal for errors) */
+.form-submit-error {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
   color: #ef4444;
+  font-size: 0.9rem;
+  margin-top: 0.85rem;
+  line-height: 1.5;
 }
 
 /* ===================================
@@ -1543,7 +1555,7 @@ a:hover { color: var(--secondary-purple); }
   }
   .hero-subtitle, .hero-subtitle-design { font-size: 1rem; }
   .steps-grid { grid-template-columns: 1fr; }
-  .notification { width: 90vw; max-width: 350px; padding: 20px; font-size: 1.1rem; }
+  .form-success-state { padding: 2.5rem 1rem; }
 }
 
 /* ===================================
