@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true, // For static export / GitHub Pages compatibility
+    // Vercel handles Next.js image optimization natively — no config needed
   },
   async headers() {
     return [
