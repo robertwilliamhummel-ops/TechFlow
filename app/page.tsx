@@ -115,7 +115,7 @@ export default function HomePage() {
               <p>Beautiful, conversion-focused websites that help your business stand out online and attract more customers.</p>
               <ul className="service-features">
                 <li>Custom Responsive Design</li>
-                <li>SEO Optimization Included</li>
+                <li>Search-Engine Ready</li>
                 <li>Mobile-First Approach</li>
                 <li>Content Management System</li>
               </ul>
