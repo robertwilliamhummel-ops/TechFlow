@@ -50,7 +50,7 @@ export default function FormSuccessBurst({ trigger, origin }: FormSuccessBurstPr
       return {
         x: cx, y: cy,
         vx: Math.cos(angle) * speed,
-        vy: Math.sin(angle) * speed - 4,
+        vy: Math.sin(angle) * speed,
         color: COLORS[Math.floor(Math.random() * COLORS.length)],
         size:  4 + Math.random() * 7,
         life,
