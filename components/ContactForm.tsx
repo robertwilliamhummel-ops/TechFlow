@@ -30,9 +30,10 @@ export default function ContactForm() {
   const [loading, setLoading]         = useState(false)
   const [submitted, setSubmitted]     = useState(false)
   const [submitError, setSubmitError] = useState('')
-  const [burst, setBurst]             = useState(false)
+  const [burstCount, setBurstCount]   = useState(0)
+  const [burstOrigin, setBurstOrigin] = useState<{ x: number; y: number } | undefined>(undefined)
 
-  // Ref passed to confetti so it fires from the form container's centre
+  // Ref used to measure origin before layout changes on submit
   const containerRef = useRef<HTMLDivElement>(null)
 
   // ── Validation ──────────────────────────────────────────────────────────────
@@ -87,10 +88,11 @@ export default function ContactForm() {
       })
 
       if (res.ok) {
-        // Success — swap to success state and fire confetti
+        // Capture origin NOW, before setSubmitted re-renders the layout
+        const rect = containerRef.current?.getBoundingClientRect()
+        setBurstOrigin(rect ? { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 } : undefined)
         setSubmitted(true)
-        setBurst(true)
-        setTimeout(() => setBurst(false), 100)
+        setBurstCount(prev => prev + 1)
       } else {
         const data = await res.json().catch(() => ({}))
         const msg = Array.isArray(data?.errors)
@@ -122,7 +124,7 @@ export default function ContactForm() {
       {/* Confetti — fires from the form container centre, z-index 99999,
           never overlaps the success message because the message is in the DOM
           below the canvas layer */}
-      <FormSuccessBurst trigger={burst} anchorRef={containerRef} />
+      <FormSuccessBurst trigger={burstCount} origin={burstOrigin} />
 
       <section id="contact-form" className="contact-form-section">
         <div className="container">

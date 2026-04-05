@@ -1,10 +1,13 @@
 'use client'
 
-import { useEffect, useRef, RefObject } from 'react'
+import { useEffect, useRef } from 'react'
 
 interface FormSuccessBurstProps {
-  trigger: boolean
-  anchorRef?: RefObject<HTMLElement | null>
+  /** Increment to fire; 0 = never fired. Counter avoids the boolean-pulse
+   *  pattern that caused the cleanup to cancel the animation after 100 ms. */
+  trigger: number
+  /** Viewport-relative origin point, captured before any layout change. */
+  origin?: { x: number; y: number }
 }
 
 const COLORS = ['#667eea', '#764ba2', '#f093fb', '#4facfe', '#ffffff']
@@ -19,13 +22,13 @@ interface Particle {
   rotation: number; rotationSpeed: number
 }
 
-export default function FormSuccessBurst({ trigger, anchorRef }: FormSuccessBurstProps) {
+export default function FormSuccessBurst({ trigger, origin }: FormSuccessBurstProps) {
   const canvasRef    = useRef<HTMLCanvasElement>(null)
   const animFrameRef = useRef<number>(0)
   const safetyRef    = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
-    if (!trigger) return
+    if (!trigger) return   // 0 = never fired
 
     const canvas = canvasRef.current
     if (!canvas) return
@@ -36,14 +39,9 @@ export default function FormSuccessBurst({ trigger, anchorRef }: FormSuccessBurs
     canvas.width  = window.innerWidth
     canvas.height = window.innerHeight
 
-    // Fire from the centre of the form container, fallback to viewport centre
-    let cx = canvas.width  / 2
-    let cy = canvas.height / 2
-    if (anchorRef?.current) {
-      const r = anchorRef.current.getBoundingClientRect()
-      cx = r.left + r.width  / 2
-      cy = r.top  + r.height / 2
-    }
+    // Use the pre-captured origin (measured before layout changed), fallback to centre
+    const cx = origin?.x ?? canvas.width  / 2
+    const cy = origin?.y ?? canvas.height / 2
 
     const particles: Particle[] = Array.from({ length: PARTICLE_COUNT }, () => {
       const angle = Math.random() * Math.PI * 2
@@ -121,7 +119,7 @@ export default function FormSuccessBurst({ trigger, anchorRef }: FormSuccessBurs
       cancelAnimationFrame(animFrameRef.current)
       if (safetyRef.current) clearTimeout(safetyRef.current)
     }
-  }, [trigger, anchorRef])
+  }, [trigger, origin])
 
   return (
     <canvas
