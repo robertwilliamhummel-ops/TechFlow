@@ -129,12 +129,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Navbar />
         <main>{children}</main>
         <Footer />
-
-        {/* EmailJS */}
-        <Script
-          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-          strategy="lazyOnload"
-        />
       </body>
     </html>
   )
