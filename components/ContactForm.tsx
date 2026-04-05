@@ -31,7 +31,7 @@ export default function ContactForm() {
   const [submitted, setSubmitted]     = useState(false)
   const [submitError, setSubmitError] = useState('')
   const [burstCount, setBurstCount]   = useState(0)
-  const [burstOrigin, setBurstOrigin] = useState<{ x: number; y: number } | undefined>(undefined)
+  const burstOriginRef = useRef<{ x: number; y: number } | undefined>(undefined)
 
   // Ref used to measure origin before layout changes on submit
   const containerRef = useRef<HTMLDivElement>(null)
@@ -90,7 +90,7 @@ export default function ContactForm() {
       if (res.ok) {
         // Capture origin NOW, before setSubmitted re-renders the layout
         const rect = containerRef.current?.getBoundingClientRect()
-        setBurstOrigin(rect ? { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 } : undefined)
+        burstOriginRef.current = rect ? { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 } : undefined
         setSubmitted(true)
         setBurstCount(prev => prev + 1)
       } else {
@@ -124,7 +124,7 @@ export default function ContactForm() {
       {/* Confetti — fires from the form container centre, z-index 99999,
           never overlaps the success message because the message is in the DOM
           below the canvas layer */}
-      <FormSuccessBurst trigger={burstCount} origin={burstOrigin} />
+      <FormSuccessBurst trigger={burstCount} origin={burstOriginRef.current} />
 
       <section id="contact-form" className="contact-form-section">
         <div className="container">
