@@ -91,12 +91,16 @@ export default function Navbar() {
               <Link href="/">
                 <Image
                   src="/apple-icon.png"
-                  alt="TechFlow Solutions"
-                  width={44}
-                  height={44}
+                  alt="TechFlow Solutions logo"
+                  width={36}
+                  height={36}
                   className="nav-logo-img"
                   priority
                 />
+                <span className="nav-logo-text">
+                  <span className="nav-logo-brand">TechFlow</span>
+                  <span className="nav-logo-sub"> Solutions</span>
+                </span>
               </Link>
             </div>
 
