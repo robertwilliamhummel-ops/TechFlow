@@ -52,19 +52,15 @@ export default function DigitalGrowthPage() {
     <>
       <Hero sectionClass="hero hero-growth" images={heroImages}>
         <div className="hero-content">
-          <FadeUp duration={700}>
-            <h1 className="hero-title">
-              Digital Growth &amp; Search Visibility
-              <span className="highlight"> Supporting the Websites and Systems We Build</span>
-            </h1>
-          </FadeUp>
-          <FadeUp delay={400}><p className="hero-subtitle">Technical SEO, performance optimization, and structural improvements that help businesses remain visible and competitive online — without gimmicks or unrealistic promises.</p></FadeUp>
-          <FadeUp delay={600}>
-            <div className="hero-cta">
-              <Link href="/contact" className="btn btn-primary"><i className="fas fa-comments" /> Discuss Website Performance</Link>
-              <a href="tel:+16475728341" className="btn btn-outline"><i className="fas fa-phone" /> Call (647) 572-8341</a>
-            </div>
-          </FadeUp>
+          <h1 className="hero-title">
+            Digital Growth &amp; Search Visibility
+            <span className="highlight"> Supporting the Websites and Systems We Build</span>
+          </h1>
+          <p className="hero-subtitle">Technical SEO, performance optimization, and structural improvements that help businesses remain visible and competitive online — without gimmicks or unrealistic promises.</p>
+          <div className="hero-cta">
+            <Link href="/contact" className="btn btn-primary"><i className="fas fa-comments" /> Discuss Website Performance</Link>
+            <a href="tel:+16475728341" className="btn btn-outline"><i className="fas fa-phone" /> Call (647) 572-8341</a>
+          </div>
         </div>
       </Hero>
 

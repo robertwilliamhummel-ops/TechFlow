@@ -45,34 +45,28 @@ export default function AboutPage() {
     <>
       <Hero sectionClass="hero-about" images={heroImages}>
         <div className="hero-content">
-          <FadeUp duration={700}>
-            <h1 className="hero-title">
-              Hi, I&apos;m <span className="highlight">Rob</span>
-            </h1>
-          </FadeUp>
-          <FadeUp delay={400} duration={600}>
-            <p className="hero-subtitle">IT Services &amp; Business Automation</p>
-          </FadeUp>
-          <FadeUp delay={600} duration={600}>
-            <p className="hero-description">
-              I started TechFlow Solutions to help Toronto businesses build reliable technology
-              systems that actually support how they operate — from IT infrastructure and business
-              automation to professional websites that integrate cleanly with those systems.
-              <br /><br />
-              With over 15 years of experience in IT engineering, including leadership roles
-              supporting business-critical systems, I focus on practical, done-for-you solutions
-              that reduce friction, eliminate manual work, and make technology dependable instead
-              of frustrating.
-              <br /><br />
-              We also design and build professional websites — not as standalone marketing assets,
-              but as systems that support your operations, workflows, and automation. Automation
-              projects may include tools such as custom invoicing systems (InvoicePro), workflow
-              automation, and system integrations.
-              <br /><br />
-              No jargon, no pressure — just honest, professional support focused on helping your
-              business succeed.
-            </p>
-          </FadeUp>
+          <h1 className="hero-title">
+            Hi, I&apos;m <span className="highlight">Rob</span>
+          </h1>
+          <p className="hero-subtitle">IT Services &amp; Business Automation</p>
+          <p className="hero-description">
+            I started TechFlow Solutions to help Toronto businesses build reliable technology
+            systems that actually support how they operate — from IT infrastructure and business
+            automation to professional websites that integrate cleanly with those systems.
+            <br /><br />
+            With over 15 years of experience in IT engineering, including leadership roles
+            supporting business-critical systems, I focus on practical, done-for-you solutions
+            that reduce friction, eliminate manual work, and make technology dependable instead
+            of frustrating.
+            <br /><br />
+            We also design and build professional websites — not as standalone marketing assets,
+            but as systems that support your operations, workflows, and automation. Automation
+            projects may include tools such as custom invoicing systems (InvoicePro), workflow
+            automation, and system integrations.
+            <br /><br />
+            No jargon, no pressure — just honest, professional support focused on helping your
+            business succeed.
+          </p>
         </div>
       </Hero>
 

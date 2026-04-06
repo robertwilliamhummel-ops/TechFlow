@@ -31,48 +31,40 @@ export default function HomePage() {
     <>
       <Hero sectionClass="hero" images={heroImages}>
         <div className="hero-content">
-          <FadeUp duration={700}>
-            <h1 className="hero-title">
-              IT Services &amp; Business Automation
-              <span className="highlight"> for Toronto Businesses</span>
-            </h1>
-          </FadeUp>
+          <h1 className="hero-title" style={{ animation: 'fadeInUp 0.7s ease both' }}>
+            IT Services &amp; Business Automation
+            <span className="highlight"> for Toronto Businesses</span>
+          </h1>
 
-          <FadeUp delay={400} duration={700}>
-            <p className="hero-subtitle">
-              Custom automation tools, workflow solutions, and professional websites. 15+ years of IT
-              engineering experience helping GTA companies streamline operations and grow online.
-            </p>
-          </FadeUp>
+          <p className="hero-subtitle" style={{ animation: 'fadeInUp 0.7s ease 0.2s both' }}>
+            Custom automation tools, workflow solutions, and professional websites. 15+ years of IT
+            engineering experience helping GTA companies streamline operations and grow online.
+          </p>
 
-          <FadeUp delay={600} duration={700}>
-            <div className="hero-features">
-              <Link href="/business-automation" className="feature">
-                <i className="fas fa-cogs" /><span>Business Automation</span>
-              </Link>
-              <Link href="/it-services" className="feature">
-                <i className="fas fa-tools" /><span>IT Services</span>
-              </Link>
-              <Link href="/website-design" className="feature">
-                <i className="fas fa-paint-brush" /><span>Website Design</span>
-              </Link>
-              <Link href="/remote-support" className="feature">
-                <i className="fas fa-desktop" /><span>Remote Support</span>
-              </Link>
-            </div>
-          </FadeUp>
+          <div className="hero-features" style={{ animation: 'fadeInUp 0.65s ease 0.4s both' }}>
+            <Link href="/business-automation" className="feature">
+              <i className="fas fa-cogs" /><span>Business Automation</span>
+            </Link>
+            <Link href="/it-services" className="feature">
+              <i className="fas fa-tools" /><span>IT Services</span>
+            </Link>
+            <Link href="/website-design" className="feature">
+              <i className="fas fa-paint-brush" /><span>Website Design</span>
+            </Link>
+            <Link href="/remote-support" className="feature">
+              <i className="fas fa-desktop" /><span>Remote Support</span>
+            </Link>
+          </div>
 
-          <FadeUp delay={800} duration={700}>
-            <div className="hero-cta">
-              <Link href="/contact" className="btn btn-primary">Book a Free Consultation</Link>
-              <Link href="/it-services" className="btn btn-secondary">
-                <i className="fas fa-tools" /> Explore IT Services
-              </Link>
-              <a href="tel:+16475728341" className="btn btn-outline">
-                <i className="fas fa-phone" /> (647) 572-8341
-              </a>
-            </div>
-          </FadeUp>
+          <div className="hero-cta" style={{ animation: 'fadeInUp 0.65s ease 0.55s both' }}>
+            <Link href="/contact" className="btn btn-primary">Book a Free Consultation</Link>
+            <Link href="/it-services" className="btn btn-secondary">
+              <i className="fas fa-tools" /> Explore IT Services
+            </Link>
+            <a href="tel:+16475728341" className="btn btn-outline">
+              <i className="fas fa-phone" /> (647) 572-8341
+            </a>
+          </div>
 
         </div>
       </Hero>

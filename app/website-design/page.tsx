@@ -52,19 +52,15 @@ export default function WebsiteDesignPage() {
     <>
       <Hero sectionClass="hero-it-services" images={heroImages}>
         <div className="hero-content">
-          <FadeUp duration={700}>
-            <h1 className="hero-title">
-              Professional Website Design
-              <span className="gradient-text"> for Toronto Businesses</span>
-            </h1>
-          </FadeUp>
-          <FadeUp delay={400}><p className="hero-subtitle">Professional websites designed to support your IT systems and business automation workflows. We build digital experiences that integrate cleanly with your operations and help your business stand out in the Greater Toronto Area.</p></FadeUp>
-          <FadeUp delay={600}>
-            <div className="hero-cta">
-              <a href="#contact-form" className="btn-hero btn-hero-primary"><i className="fas fa-rocket" /> Discuss Website Needs</a>
-              <a href="tel:+16475728341" className="btn-hero btn-hero-secondary"><i className="fas fa-phone" /> Call (647) 572-8341</a>
-            </div>
-          </FadeUp>
+          <h1 className="hero-title">
+            Professional Website Design
+            <span className="gradient-text"> for Toronto Businesses</span>
+          </h1>
+          <p className="hero-subtitle">Professional websites designed to support your IT systems and business automation workflows. We build digital experiences that integrate cleanly with your operations and help your business stand out in the Greater Toronto Area.</p>
+          <div className="hero-cta">
+            <a href="#contact-form" className="btn-hero btn-hero-primary"><i className="fas fa-rocket" /> Discuss Website Needs</a>
+            <a href="tel:+16475728341" className="btn-hero btn-hero-secondary"><i className="fas fa-phone" /> Call (647) 572-8341</a>
+          </div>
         </div>
       </Hero>
 

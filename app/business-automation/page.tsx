@@ -71,19 +71,15 @@ export default function BusinessAutomationPage() {
     <>
       <Hero sectionClass="hero-it-services" images={heroImages}>
         <div className="hero-content">
-          <FadeUp duration={700}>
-            <h1 className="hero-title">
-              <span className="highlight">Business Automation Solutions</span>
-              {' '}for Toronto Businesses
-            </h1>
-          </FadeUp>
-          <FadeUp delay={400}><p className="hero-subtitle">Custom tools that streamline operations, reduce manual work, and scale faster — from mobile invoicing to workflow automation.</p></FadeUp>
-          <FadeUp delay={600}>
-            <div className="hero-cta">
-              <Link href="/contact" className="btn-hero btn-hero-primary"><i className="fas fa-calendar-check" /> Request Automation Consultation</Link>
-              <a href="tel:+16475728341" className="btn-hero btn-hero-secondary"><i className="fas fa-phone" /> Call (647) 572-8341</a>
-            </div>
-          </FadeUp>
+          <h1 className="hero-title">
+            <span className="highlight">Business Automation Solutions</span>
+            {' '}for Toronto Businesses
+          </h1>
+          <p className="hero-subtitle">Custom tools that streamline operations, reduce manual work, and scale faster — from mobile invoicing to workflow automation.</p>
+          <div className="hero-cta">
+            <Link href="/contact" className="btn-hero btn-hero-primary"><i className="fas fa-calendar-check" /> Request Automation Consultation</Link>
+            <a href="tel:+16475728341" className="btn-hero btn-hero-secondary"><i className="fas fa-phone" /> Call (647) 572-8341</a>
+          </div>
         </div>
       </Hero>
 

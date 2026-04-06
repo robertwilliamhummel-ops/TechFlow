@@ -63,31 +63,23 @@ export default function RemoteSupportPage() {
     <>
       <Hero sectionClass="hero-remote" images={heroImages}>
         <div className="hero-content">
-          <FadeUp duration={700}>
-            <h1 className="hero-title">
-              Professional <span className="highlight">Remote IT Support</span> for Toronto Businesses
-            </h1>
-          </FadeUp>
-          <FadeUp delay={400} duration={650}>
-            <p className="hero-subtitle">
-              Fast, secure remote assistance for software issues, email problems, cloud access, workstation troubleshooting, and more — without the wait or cost of an on-site visit.
-            </p>
-          </FadeUp>
-          <FadeUp delay={600} duration={650}>
-            <p className="hero-subtitle" style={{ fontSize:'1.05rem', marginTop:'0.75rem', color:'rgba(255,255,255,0.8)' }}>
-              I use TechFlow Remote Support — a secure, self-hosted remote access tool built on enterprise-grade infrastructure. Your data stays private, encrypted, and under your control at all times.
-            </p>
-          </FadeUp>
-          <FadeUp delay={800} duration={650}>
-            <div className="hero-cta">
-              <a href={DOWNLOAD_URL} download className="btn btn-primary">
-                <i className="fas fa-download" /> Download TechFlow Remote Support
-              </a>
-              <a href="tel:+16475728341" className="btn btn-secondary">
-                <i className="fas fa-phone" /> Call (647) 572-8341
-              </a>
-            </div>
-          </FadeUp>
+          <h1 className="hero-title">
+            Professional <span className="highlight">Remote IT Support</span> for Toronto Businesses
+          </h1>
+          <p className="hero-subtitle">
+            Fast, secure remote assistance for software issues, email problems, cloud access, workstation troubleshooting, and more — without the wait or cost of an on-site visit.
+          </p>
+          <p className="hero-subtitle" style={{ fontSize:'1.05rem', marginTop:'0.75rem', color:'rgba(255,255,255,0.8)' }}>
+            I use TechFlow Remote Support — a secure, self-hosted remote access tool built on enterprise-grade infrastructure. Your data stays private, encrypted, and under your control at all times.
+          </p>
+          <div className="hero-cta">
+            <a href={DOWNLOAD_URL} download className="btn btn-primary">
+              <i className="fas fa-download" /> Download TechFlow Remote Support
+            </a>
+            <a href="tel:+16475728341" className="btn btn-secondary">
+              <i className="fas fa-phone" /> Call (647) 572-8341
+            </a>
+          </div>
         </div>
       </Hero>
 

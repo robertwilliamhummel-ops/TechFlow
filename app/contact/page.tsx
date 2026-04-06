@@ -58,19 +58,15 @@ export default function ContactPage() {
     <>
       <Hero sectionClass="hero-contact" images={heroImages}>
         <div className="hero-content">
-          <FadeUp duration={700}>
-            <h1 className="hero-title">
-              <span className="highlight">Contact</span> TechFlow Solutions
-            </h1>
-          </FadeUp>
-          <FadeUp delay={400}><p className="hero-subtitle">Reach out for IT services, business automation, or professional website design</p></FadeUp>
-          <FadeUp delay={600}>
-            <div className="hero-cta-contact">
-              <a href="tel:+16475728341" className="btn-hero btn-hero-primary"><i className="fas fa-phone" /> Call (647) 572-8341</a>
-              <a href="mailto:rob@techflowsolutions.ca" className="btn-hero btn-hero-secondary"><i className="fas fa-envelope" /> Email Me</a>
-              <a href="#contact-form" className="btn-hero btn-hero-secondary"><i className="fas fa-message" /> Send a Message</a>
-            </div>
-          </FadeUp>
+          <h1 className="hero-title">
+            <span className="highlight">Contact</span> TechFlow Solutions
+          </h1>
+          <p className="hero-subtitle">Reach out for IT services, business automation, or professional website design</p>
+          <div className="hero-cta-contact">
+            <a href="tel:+16475728341" className="btn-hero btn-hero-primary"><i className="fas fa-phone" /> Call (647) 572-8341</a>
+            <a href="mailto:rob@techflowsolutions.ca" className="btn-hero btn-hero-secondary"><i className="fas fa-envelope" /> Email Me</a>
+            <a href="#contact-form" className="btn-hero btn-hero-secondary"><i className="fas fa-message" /> Send a Message</a>
+          </div>
         </div>
       </Hero>
 
