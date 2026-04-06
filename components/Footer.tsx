@@ -72,11 +72,6 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p>&copy; {new Date().getFullYear()} TechFlow Solutions. All rights reserved.</p>
-            <p className="footer-links">
-              <span>Privacy Policy</span>
-              <span>Terms of Service</span>
-              <span>Sitemap</span>
-            </p>
           </div>
         </div>
       </div>
