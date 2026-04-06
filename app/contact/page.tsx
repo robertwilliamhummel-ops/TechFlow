@@ -28,28 +28,28 @@ const heroImages = [
 // Original FAQ questions restored from contact.html
 const faqs = [
   {
-    q: 'Do you offer on-site support for businesses?',
-    a: 'Yes. I provide on-site support for businesses across the Greater Toronto Area when needed. Many issues can be resolved remotely, but on-site visits are available for infrastructure work, network setup, and situations that require hands-on assistance.',
+    q: 'How much do your IT services and automation projects cost?',
+    a: 'It depends on the scope. IT support is available hourly or through a monthly managed plan — both are discussed during a free consultation with no obligation. Business automation projects are custom-scoped and typically start at $3,500, while website projects start at $799. The consultation is always free, and you\'ll receive a clear proposal before any work begins.',
   },
   {
-    q: 'How quickly can you respond to IT issues?',
-    a: 'I aim to respond promptly during business hours. Response times vary based on urgency and scope, and after-hours support is available by appointment for business-critical situations.',
+    q: 'How quickly can you respond when something breaks?',
+    a: 'Most issues are responded to within 2 hours during business hours (Monday–Friday 9AM–5PM). Business-critical situations receive priority response, often within 30–60 minutes. Remote support is available immediately for existing clients — no travel time, no waiting.',
   },
   {
-    q: 'Do you work with Microsoft 365 and Google Workspace?',
-    a: 'Yes. I support Microsoft 365 and Google Workspace environments, including setup, migration, security configuration, and ongoing management for business users.',
+    q: 'Can you handle both IT support and business automation for my company?',
+    a: 'Yes — and that combination is where TechFlow adds the most value. Many clients start with IT support to stabilize their systems, then move into automation to eliminate manual work like invoicing, client follow-ups, and workflow handoffs. Having one provider handle both means your technology and your custom tools are always built to work together.',
   },
   {
-    q: 'Do you offer monthly IT support plans?',
-    a: 'Yes. Ongoing IT support and maintenance plans are available for businesses that want consistent, proactive support. Plans are discussed during consultation to ensure they match your needs.',
+    q: 'What areas of the GTA do you serve, and do you offer remote support?',
+    a: 'I serve Toronto and the full Greater Toronto Area including Mississauga, Brampton, Markham, Vaughan, Richmond Hill, Oakville, and surrounding regions. Most IT issues and all automation work can be handled fully remotely through a secure, encrypted connection — meaning faster response times and no travel charges for your business.',
   },
   {
-    q: 'Can you help with website updates or improvements?',
-    a: "Yes. I provide website updates, enhancements, and ongoing improvements — especially for websites I've built or that integrate with your IT systems and automation.",
+    q: 'Do you sign NDAs or confidentiality agreements?',
+    a: 'Yes. I regularly work with law firms, accounting practices, medical offices, and other businesses that handle sensitive client data. NDAs and confidentiality agreements are standard for any engagement where required — just mention it during the consultation.',
   },
   {
-    q: 'What payment methods do you accept?',
-    a: 'Invoices are issued electronically. Payment methods and billing terms are outlined during the proposal stage after we\'ve discussed scope and requirements.',
+    q: 'What does the process look like from first contact to getting started?',
+    a: 'It starts with a free 15–20 minute consultation — no pressure, no sales pitch. I learn about your business, your challenges, and your goals. From there I provide a clear written proposal outlining the scope, timeline, and cost. Once approved, most IT projects begin within a few days and automation projects are kicked off with a detailed discovery session to map your exact workflow.',
   },
 ]
 
