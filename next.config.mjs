@@ -5,6 +5,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      { source: '/index.html',               destination: '/',                    permanent: true },
       { source: '/it-services.html',        destination: '/it-services',        permanent: true },
       { source: '/business-automation.html', destination: '/business-automation', permanent: true },
       { source: '/website-design.html',      destination: '/website-design',      permanent: true },
