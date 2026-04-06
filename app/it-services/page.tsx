@@ -36,7 +36,7 @@ const clients = [
   { icon:'fa-briefcase',   title:'Professional Offices',      desc:'Law firms, accounting firms, and consultancies that depend on secure, reliable systems.' },
   { icon:'fa-shopping-bag',title:'Retail Stores',             desc:'Point-of-sale systems, payment processing, and network connectivity.' },
   { icon:'fa-home',        title:'Real Estate Teams',         desc:'Mobile-friendly setups, cloud access, and communication tools.' },
-  { icon:'fa-tooth',       title:'Medical & Dental Clinics',  desc:'PHIPA & PIPEDA-aware IT setup and reliable systems for Ontario healthcare providers.' },
+  { icon:'fa-tooth',       title:'Medical & Dental Clinics',  desc:'Reliable IT setup for clinics that handle sensitive patient data and need systems they can depend on.' },
   { icon:'fa-hard-hat',    title:'Trades & Service Companies',desc:'Field-friendly technology and mobile device management.' },
 ]
 
