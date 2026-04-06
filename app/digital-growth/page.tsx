@@ -131,7 +131,7 @@ export default function DigitalGrowthPage() {
       </section>
 
       {/* FAQ Accordion */}
-      <section className="page-section" style={{ background:'rgba(0,0,0,0.3)' }}>
+      <section className="page-section page-section--dark">
         <div className="container">
           <SlideReveal direction="right" duration={700}>
             <div className="accordion-container">
