@@ -108,25 +108,26 @@ export default function DigitalGrowthPage() {
         </div>
       </section>
 
-      {/* Process Accordion */}
+      {/* Process Steps */}
       <section className="page-section page-section--dark">
         <div className="container">
-          <SlideReveal direction="left" duration={700}>
-            <div className="accordion-container">
-              <Accordion title="Technical Implementation Process (How We Support Your Project)">
-                <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:'1.5rem', padding:'1rem 2rem 0' }}>
-                  {processPhases.map((phase) => (
-                    <div key={phase.title} style={{ background:'rgba(255,255,255,0.04)', border:'1px solid rgba(255,255,255,0.08)', borderRadius:12, padding:'1.5rem' }}>
-                      <h4 style={{ color:'#fff', marginBottom:'1rem', fontSize:'1rem', fontWeight:600 }}>{phase.title}</h4>
-                      <ul style={{ paddingLeft:'1.2rem' }}>
-                        {phase.items.map((item) => <li key={item} style={{ color:'rgba(255,255,255,0.7)', marginBottom:'0.5rem', fontSize:'0.9rem', lineHeight:1.5 }}>{item}</li>)}
-                      </ul>
-                    </div>
-                  ))}
+          <FadeUp><div className="section-header">
+            <h2>Technical Implementation Process</h2>
+            <p>How we support your project from start to finish</p>
+          </div></FadeUp>
+          <div className="steps-grid">
+            {processPhases.map((phase, i) => (
+              <SlideReveal key={phase.title} direction={i % 2 === 0 ? 'left' : 'right'} delay={i * 90} duration={600}>
+                <div className="step-card" style={{ opacity:1, transform:'none' }}>
+                  <div className="step-number">{i + 1}</div>
+                  <h3>{phase.title}</h3>
+                  <ul style={{ paddingLeft:'1.2rem', marginTop:'0.75rem' }}>
+                    {phase.items.map((item) => <li key={item} style={{ color:'rgba(255,255,255,0.7)', marginBottom:'0.4rem', fontSize:'0.9rem', lineHeight:1.5 }}>{item}</li>)}
+                  </ul>
                 </div>
-              </Accordion>
-            </div>
-          </SlideReveal>
+              </SlideReveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -135,7 +136,7 @@ export default function DigitalGrowthPage() {
         <div className="container">
           <SlideReveal direction="right" duration={700}>
             <div className="accordion-container">
-              <Accordion title="Common Questions About Digital Growth (6 Technical Answers)">
+              <Accordion title="Frequently Asked Questions">
                 <div style={{ padding:'0 2rem 0.5rem' }}>
                   {faqs.map((faq) => (
                     <div key={faq.q} style={{ borderBottom:'1px solid rgba(255,255,255,0.08)', padding:'1.25rem 0' }}>
