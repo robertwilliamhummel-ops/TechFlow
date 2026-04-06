@@ -64,6 +64,11 @@ export default function AboutPage() {
               that reduce friction, eliminate manual work, and make technology dependable instead
               of frustrating.
               <br /><br />
+              We also design and build professional websites — not as standalone marketing assets,
+              but as systems that support your operations, workflows, and automation. Automation
+              projects may include tools such as custom invoicing systems (InvoicePro), workflow
+              automation, and system integrations.
+              <br /><br />
               No jargon, no pressure — just honest, professional support focused on helping your
               business succeed.
             </p>
