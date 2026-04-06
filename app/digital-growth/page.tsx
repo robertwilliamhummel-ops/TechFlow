@@ -52,12 +52,12 @@ export default function DigitalGrowthPage() {
     <>
       <Hero sectionClass="hero hero-growth" images={heroImages}>
         <div className="hero-content">
-          <h1 className="hero-title">
+          <h1 className="hero-title" style={{ animation: 'fadeInUp 0.7s ease both' }}>
             Digital Growth &amp; Search Visibility
             <span className="highlight"> Supporting the Websites and Systems We Build</span>
           </h1>
-          <p className="hero-subtitle">Technical SEO, performance optimization, and structural improvements that help businesses remain visible and competitive online — without gimmicks or unrealistic promises.</p>
-          <div className="hero-cta">
+          <p className="hero-subtitle" style={{ animation: 'fadeInUp 0.7s ease 0.2s both' }}>Technical SEO, performance optimization, and structural improvements that help businesses remain visible and competitive online — without gimmicks or unrealistic promises.</p>
+          <div className="hero-cta" style={{ animation: 'fadeInUp 0.65s ease 0.4s both' }}>
             <Link href="/contact" className="btn btn-primary"><i className="fas fa-comments" /> Discuss Website Performance</Link>
             <a href="tel:+16475728341" className="btn btn-outline"><i className="fas fa-phone" /> Call (647) 572-8341</a>
           </div>

@@ -66,12 +66,12 @@ export default function ITServicesPage() {
     <>
       <Hero sectionClass="hero-it-services" images={heroImages}>
         <div className="hero-content">
-          <h1 className="hero-title">
+          <h1 className="hero-title" style={{ animation: 'fadeInUp 0.7s ease both' }}>
             <span className="highlight">Professional IT Services</span>
             {' '}for Toronto Businesses
           </h1>
-          <p className="hero-subtitle">Reliable, scalable technology support that keeps your operations running smoothly — with optional workflow automation for growing teams.</p>
-          <div className="hero-cta">
+          <p className="hero-subtitle" style={{ animation: 'fadeInUp 0.7s ease 0.2s both' }}>Reliable, scalable technology support that keeps your operations running smoothly — with optional workflow automation for growing teams.</p>
+          <div className="hero-cta" style={{ animation: 'fadeInUp 0.65s ease 0.4s both' }}>
             <Link href="/contact" className="btn-hero btn-hero-primary"><i className="fas fa-calendar-check" /> Request Consultation</Link>
             <a href="tel:+16475728341" className="btn-hero btn-hero-secondary"><i className="fas fa-phone" /> Call (647) 572-8341</a>
           </div>

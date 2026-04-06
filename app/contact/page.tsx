@@ -58,11 +58,11 @@ export default function ContactPage() {
     <>
       <Hero sectionClass="hero-contact" images={heroImages}>
         <div className="hero-content">
-          <h1 className="hero-title">
+          <h1 className="hero-title" style={{ animation: 'fadeInUp 0.7s ease both' }}>
             <span className="highlight">Contact</span> TechFlow Solutions
           </h1>
-          <p className="hero-subtitle">Reach out for IT services, business automation, or professional website design</p>
-          <div className="hero-cta-contact">
+          <p className="hero-subtitle" style={{ animation: 'fadeInUp 0.7s ease 0.2s both' }}>Reach out for IT services, business automation, or professional website design</p>
+          <div className="hero-cta-contact" style={{ animation: 'fadeInUp 0.65s ease 0.4s both' }}>
             <a href="tel:+16475728341" className="btn-hero btn-hero-primary"><i className="fas fa-phone" /> Call (647) 572-8341</a>
             <a href="mailto:rob@techflowsolutions.ca" className="btn-hero btn-hero-secondary"><i className="fas fa-envelope" /> Email Me</a>
             <a href="#contact-form" className="btn-hero btn-hero-secondary"><i className="fas fa-message" /> Send a Message</a>

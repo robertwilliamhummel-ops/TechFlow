@@ -45,11 +45,11 @@ export default function AboutPage() {
     <>
       <Hero sectionClass="hero-about" images={heroImages}>
         <div className="hero-content">
-          <h1 className="hero-title">
+          <h1 className="hero-title" style={{ animation: 'fadeInUp 0.7s ease both' }}>
             Hi, I&apos;m <span className="highlight">Rob</span>
           </h1>
-          <p className="hero-subtitle">IT Services &amp; Business Automation</p>
-          <p className="hero-description">
+          <p className="hero-subtitle" style={{ animation: 'fadeInUp 0.7s ease 0.2s both' }}>IT Services &amp; Business Automation</p>
+          <p className="hero-description" style={{ animation: 'fadeInUp 0.65s ease 0.4s both' }}>
             I started TechFlow Solutions to help Toronto businesses build reliable technology
             systems that actually support how they operate — from IT infrastructure and business
             automation to professional websites that integrate cleanly with those systems.

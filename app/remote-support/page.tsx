@@ -63,16 +63,16 @@ export default function RemoteSupportPage() {
     <>
       <Hero sectionClass="hero-remote" images={heroImages}>
         <div className="hero-content">
-          <h1 className="hero-title">
+          <h1 className="hero-title" style={{ animation: 'fadeInUp 0.7s ease both' }}>
             Professional <span className="highlight">Remote IT Support</span> for Toronto Businesses
           </h1>
-          <p className="hero-subtitle">
+          <p className="hero-subtitle" style={{ animation: 'fadeInUp 0.7s ease 0.2s both' }}>
             Fast, secure remote assistance for software issues, email problems, cloud access, workstation troubleshooting, and more — without the wait or cost of an on-site visit.
           </p>
-          <p className="hero-subtitle" style={{ fontSize:'1.05rem', marginTop:'0.75rem', color:'rgba(255,255,255,0.8)' }}>
+          <p className="hero-subtitle" style={{ fontSize:'1.05rem', marginTop:'0.75rem', color:'rgba(255,255,255,0.8)', animation: 'fadeInUp 0.65s ease 0.4s both' }}>
             I use TechFlow Remote Support — a secure, self-hosted remote access tool built on enterprise-grade infrastructure. Your data stays private, encrypted, and under your control at all times.
           </p>
-          <div className="hero-cta">
+          <div className="hero-cta" style={{ animation: 'fadeInUp 0.65s ease 0.55s both' }}>
             <a href={DOWNLOAD_URL} download className="btn btn-primary">
               <i className="fas fa-download" /> Download TechFlow Remote Support
             </a>
