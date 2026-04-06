@@ -26,7 +26,7 @@ const heroImages = [
 const services = [
   { icon:'fa-network-wired', title:'Network Setup & Security',        desc:'Professional network design, setup, and security for small businesses.', features:['Router & switch configuration','Wi-Fi setup & optimization','Firewall & security configuration','VPN setup for remote teams','Network monitoring'] },
   { icon:'fa-cloud',         title:'Cloud Hosting & Email Solutions', desc:'Microsoft 365, Google Workspace, and cloud hosting setup and migration.', features:['Microsoft 365 setup & migration','Google Workspace configuration','Business email setup','Cloud storage & file sharing','Domain & DNS management'] },
-  { icon:'fa-headset',       title:'Managed IT Support',              desc:'Ongoing IT support and maintenance to keep your systems running smoothly.', features:['Remote & on-site support','Proactive system monitoring','Software updates & patching','User account management','Help desk support'] },
+  { icon:'fa-headset',       title:'Managed IT Support',              desc:'Ongoing IT support and maintenance to keep your systems running smoothly.', features:['Remote & on-site support','Monitoring & alerting setup','Software updates & patching','User account management','Dedicated point of contact for IT issues'] },
   { icon:'fa-database',      title:'Backup & Disaster Recovery',      desc:"Protect your business data with automated backups and a clear recovery plan.", features:['Automated backup solutions','Cloud backup configuration','Disaster recovery planning','Data restoration testing','Ransomware protection'] },
   { icon:'fa-laptop',        title:'Business Workstation Config',     desc:'New computer setup, software installation, and user migration.', features:['New PC & Mac setup','Software installation & licensing','Data migration from old systems','User profile configuration','Security hardening'] },
 ]
@@ -36,7 +36,7 @@ const clients = [
   { icon:'fa-briefcase',   title:'Professional Offices',      desc:'Law firms, accounting firms, and consultancies that depend on secure, reliable systems.' },
   { icon:'fa-shopping-bag',title:'Retail Stores',             desc:'Point-of-sale systems, payment processing, and network connectivity.' },
   { icon:'fa-home',        title:'Real Estate Teams',         desc:'Mobile-friendly setups, cloud access, and communication tools.' },
-  { icon:'fa-tooth',       title:'Medical & Dental Clinics',  desc:'HIPAA-aware IT setup and reliable systems for healthcare providers.' },
+  { icon:'fa-tooth',       title:'Medical & Dental Clinics',  desc:'PHIPA & PIPEDA-aware IT setup and reliable systems for Ontario healthcare providers.' },
   { icon:'fa-hard-hat',    title:'Trades & Service Companies',desc:'Field-friendly technology and mobile device management.' },
 ]
 
@@ -58,7 +58,7 @@ const howItWorks = [
   { num:'1', icon:'fa-comments',      title:'Initial Consultation', desc:'Free consultation to assess your technology needs and challenges. We\'ll discuss your goals and recommend solutions.' },
   { num:'2', icon:'fa-file-alt',      title:'Custom Proposal',     desc:'Receive a detailed proposal outlining services, timeline, and transparent pricing tailored to your business.' },
   { num:'3', icon:'fa-cogs',          title:'Implementation',      desc:'I handle all setup, configuration, and migration with minimal disruption to your daily operations.' },
-  { num:'4', icon:'fa-life-ring',     title:'Ongoing Support',     desc:'Continuous monitoring, maintenance, and support to keep your technology running smoothly.' },
+  { num:'4', icon:'fa-life-ring',     title:'Ongoing Support',     desc:'Scheduled maintenance, proactive check-ins, and support to keep your technology running reliably long after go-live.' },
 ]
 
 export default function ITServicesPage() {
