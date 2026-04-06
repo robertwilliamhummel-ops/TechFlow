@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import FadeUp from '@/components/animations/FadeUp'
-import StaggerGrid from '@/components/animations/StaggerGrid'
+
 import CursorGlow from '@/components/animations/CursorGlow'
 import SlideReveal from '@/components/animations/SlideReveal'
 import ContactForm from '@/components/ContactForm'
@@ -81,36 +81,42 @@ export default function ContactPage() {
             <h2>Get in Touch</h2>
             <p>Choose the contact method that works best for you.</p>
           </div></FadeUp>
-          <StaggerGrid className="contact-grid" staggerDelay={120} initialDelay={100}>
-            <CursorGlow className="contact-card primary">
-              <div className="contact-icon"><i className="fas fa-phone" /></div>
-              <h3>Call Me</h3>
-              <p>Speak directly with me about your IT, automation, or website needs</p>
-              <div className="contact-details">
-                <p><strong>Phone:</strong> (647) 572-8341</p>
-                <p><strong>Availability:</strong> See schedule below</p>
-              </div>
-            </CursorGlow>
-            <CursorGlow className="contact-card">
-              <div className="contact-icon"><i className="fas fa-envelope" /></div>
-              <h3>Email Me</h3>
-              <p>Send a detailed message and I&apos;ll get back to you promptly.</p>
-              <div className="contact-details">
-                <p><strong>Email:</strong> <a href="mailto:rob@techflowsolutions.ca">rob@techflowsolutions.ca</a></p>
-              </div>
-            </CursorGlow>
-            <CursorGlow className="contact-card">
-              <div className="contact-icon"><i className="fas fa-calendar-check" /></div>
-              <h3>Send a Message</h3>
-              <p>Use the contact form to request a quote, ask a question, or schedule a consultation</p>
-              <div className="contact-details">
-                <p><strong>Benefits:</strong></p>
-                <p><i className="fas fa-check" /> Fast replies throughout the day</p>
-                <p><i className="fas fa-check" /> Free consultation available</p>
-                <p><i className="fas fa-check" /> No-obligation quotes</p>
-              </div>
-            </CursorGlow>
-          </StaggerGrid>
+          <div className="contact-grid">
+            <FadeUp delay={0}>
+              <CursorGlow className="contact-card primary">
+                <div className="contact-icon"><i className="fas fa-phone" /></div>
+                <h3>Call Me</h3>
+                <p>Speak directly with me about your IT, automation, or website needs</p>
+                <div className="contact-details">
+                  <p><strong>Phone:</strong> (647) 572-8341</p>
+                  <p><strong>Availability:</strong> See schedule below</p>
+                </div>
+              </CursorGlow>
+            </FadeUp>
+            <FadeUp delay={120}>
+              <CursorGlow className="contact-card">
+                <div className="contact-icon"><i className="fas fa-envelope" /></div>
+                <h3>Email Me</h3>
+                <p>Send a detailed message and I&apos;ll get back to you promptly.</p>
+                <div className="contact-details">
+                  <p><strong>Email:</strong> <a href="mailto:rob@techflowsolutions.ca">rob@techflowsolutions.ca</a></p>
+                </div>
+              </CursorGlow>
+            </FadeUp>
+            <FadeUp delay={240}>
+              <CursorGlow className="contact-card">
+                <div className="contact-icon"><i className="fas fa-calendar-check" /></div>
+                <h3>Send a Message</h3>
+                <p>Use the contact form to request a quote, ask a question, or schedule a consultation</p>
+                <div className="contact-details">
+                  <p><strong>Benefits:</strong></p>
+                  <p><i className="fas fa-check" /> Fast replies throughout the day</p>
+                  <p><i className="fas fa-check" /> Free consultation available</p>
+                  <p><i className="fas fa-check" /> No-obligation quotes</p>
+                </div>
+              </CursorGlow>
+            </FadeUp>
+          </div>
         </div>
       </section>
 

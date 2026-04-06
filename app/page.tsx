@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import FadeUp from '@/components/animations/FadeUp'
-import StaggerGrid from '@/components/animations/StaggerGrid'
+
 import SlideReveal from '@/components/animations/SlideReveal'
 import CursorGlow from '@/components/animations/CursorGlow'
 
@@ -84,44 +84,50 @@ export default function HomePage() {
             <h2>IT Services &amp; Automation Solutions</h2>
             <p>Professional IT support and custom automation tools for Toronto businesses</p>
           </div></FadeUp>
-          <StaggerGrid className="services-grid" staggerDelay={120} initialDelay={100}>
-            <CursorGlow className="service-card">
-              <div className="service-icon float-icon"><i className="fas fa-cogs" /></div>
-              <h3>Business Automation</h3>
-              <p>Custom automation tools that streamline your operations and save hours every week. From invoicing to workflow management.</p>
-              <ul className="service-features">
-                <li>Custom Invoicing Systems</li>
-                <li>Payment Processing Integration</li>
-                <li>Workflow Automation Tools</li>
-                <li>Client Portal Development</li>
-              </ul>
-              <Link href="/contact" className="service-link">Request Consultation <i className="fas fa-arrow-right" /></Link>
-            </CursorGlow>
-            <CursorGlow className="service-card">
-              <div className="service-icon float-icon"><i className="fas fa-tools" /></div>
-              <h3>Business IT Support</h3>
-              <p>Reliable IT services to keep your business running smoothly with 15+ years of engineering experience.</p>
-              <ul className="service-features">
-                <li>Managed IT Support</li>
-                <li>Network Setup &amp; Security</li>
-                <li>Cloud Hosting &amp; Email Setup</li>
-                <li>Workstation Configuration</li>
-              </ul>
-              <Link href="/it-services" className="service-link">Learn More <i className="fas fa-arrow-right" /></Link>
-            </CursorGlow>
-            <CursorGlow className="service-card">
-              <div className="service-icon float-icon"><i className="fas fa-paint-brush" /></div>
-              <h3>Website Design</h3>
-              <p>Beautiful, conversion-focused websites that help your business stand out online and attract more customers.</p>
-              <ul className="service-features">
-                <li>Custom Responsive Design</li>
-                <li>Search-Engine Ready</li>
-                <li>Mobile-First Approach</li>
-                <li>Content Management System</li>
-              </ul>
-              <Link href="/website-design" className="service-link">Explore Website Options <i className="fas fa-arrow-right" /></Link>
-            </CursorGlow>
-          </StaggerGrid>
+          <div className="services-grid">
+            <FadeUp delay={0}>
+              <CursorGlow className="service-card">
+                <div className="service-icon float-icon"><i className="fas fa-cogs" /></div>
+                <h3>Business Automation</h3>
+                <p>Custom automation tools that streamline your operations and save hours every week. From invoicing to workflow management.</p>
+                <ul className="service-features">
+                  <li>Custom Invoicing Systems</li>
+                  <li>Payment Processing Integration</li>
+                  <li>Workflow Automation Tools</li>
+                  <li>Client Portal Development</li>
+                </ul>
+                <Link href="/contact" className="service-link">Request Consultation <i className="fas fa-arrow-right" /></Link>
+              </CursorGlow>
+            </FadeUp>
+            <FadeUp delay={120}>
+              <CursorGlow className="service-card">
+                <div className="service-icon float-icon"><i className="fas fa-tools" /></div>
+                <h3>Business IT Support</h3>
+                <p>Reliable IT services to keep your business running smoothly with 15+ years of engineering experience.</p>
+                <ul className="service-features">
+                  <li>Managed IT Support</li>
+                  <li>Network Setup &amp; Security</li>
+                  <li>Cloud Hosting &amp; Email Setup</li>
+                  <li>Workstation Configuration</li>
+                </ul>
+                <Link href="/it-services" className="service-link">Learn More <i className="fas fa-arrow-right" /></Link>
+              </CursorGlow>
+            </FadeUp>
+            <FadeUp delay={240}>
+              <CursorGlow className="service-card">
+                <div className="service-icon float-icon"><i className="fas fa-paint-brush" /></div>
+                <h3>Website Design</h3>
+                <p>Beautiful, conversion-focused websites that help your business stand out online and attract more customers.</p>
+                <ul className="service-features">
+                  <li>Custom Responsive Design</li>
+                  <li>Search-Engine Ready</li>
+                  <li>Mobile-First Approach</li>
+                  <li>Content Management System</li>
+                </ul>
+                <Link href="/website-design" className="service-link">Explore Website Options <i className="fas fa-arrow-right" /></Link>
+              </CursorGlow>
+            </FadeUp>
+          </div>
         </div>
       </section>
 
@@ -157,21 +163,23 @@ export default function HomePage() {
             <h2>What Our Customers Say</h2>
             <p>Real feedback from satisfied customers across the GTA</p>
           </div></FadeUp>
-          <StaggerGrid className="testimonials-grid" staggerDelay={150} initialDelay={100}>
+          <div className="testimonials-grid">
             {[
               { text: 'TechFlow helped streamline several internal workflows and clean up how our systems work together. Day-to-day tasks take less time, and everything feels more reliable and easier to manage.', author: 'Sarah M.', role: 'Accounting Firm Owner, Mississauga' },
               { text: 'What stood out was the systems-first approach. TechFlow improved our email, cloud access, and internal setup so the technology actually supports how we work instead of getting in the way.', author: 'Mike R.', role: 'Law Firm Partner, Toronto' },
               { text: 'TechFlow handled everything from our IT setup to internal workflow improvements, and also rebuilt our website to support the business properly. It finally feels like all our systems are working together.', author: 'Dr. Jennifer L.', role: 'Dental Practice, Markham' },
-            ].map((t) => (
-              <CursorGlow key={t.author} className="testimonial-card">
-                <div className="testimonial-rating">
-                  {[1,2,3,4,5].map(n => <i key={n} className="fas fa-star" />)}
-                </div>
-                <p className="testimonial-text">&ldquo;{t.text}&rdquo;</p>
-                <div className="author-info"><h4>{t.author}</h4><span>{t.role}</span></div>
-              </CursorGlow>
+            ].map((t, i) => (
+              <FadeUp key={t.author} delay={i * 150}>
+                <CursorGlow className="testimonial-card">
+                  <div className="testimonial-rating">
+                    {[1,2,3,4,5].map(n => <i key={n} className="fas fa-star" />)}
+                  </div>
+                  <p className="testimonial-text">&ldquo;{t.text}&rdquo;</p>
+                  <div className="author-info"><h4>{t.author}</h4><span>{t.role}</span></div>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 

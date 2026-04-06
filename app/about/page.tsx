@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import FadeUp from '@/components/animations/FadeUp'
-import StaggerGrid from '@/components/animations/StaggerGrid'
+
 import SlideReveal from '@/components/animations/SlideReveal'
 import CursorGlow from '@/components/animations/CursorGlow'
 
@@ -83,15 +83,17 @@ export default function AboutPage() {
             <h2>What Drives Me</h2>
             <p>The values that guide everything I do</p>
           </div></FadeUp>
-          <StaggerGrid className="values-grid" staggerDelay={100} initialDelay={100}>
-            {values.map((v) => (
-              <CursorGlow key={v.title} className="value-card">
-                <div className="value-icon"><i className={`fas ${v.icon}`} /></div>
-                <h3>{v.title}</h3>
-                <p>{v.desc}</p>
-              </CursorGlow>
+          <div className="values-grid">
+            {values.map((v, i) => (
+              <FadeUp key={v.title} delay={i * 100}>
+                <CursorGlow className="value-card">
+                  <div className="value-icon"><i className={`fas ${v.icon}`} /></div>
+                  <h3>{v.title}</h3>
+                  <p>{v.desc}</p>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 

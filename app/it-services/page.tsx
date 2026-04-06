@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import FadeUp from '@/components/animations/FadeUp'
-import StaggerGrid from '@/components/animations/StaggerGrid'
+
 import SlideReveal from '@/components/animations/SlideReveal'
 import CursorGlow from '@/components/animations/CursorGlow'
 
@@ -101,16 +101,18 @@ export default function ITServicesPage() {
       <section className="page-section page-section--darker">
         <div className="container">
           <FadeUp><div className="section-header"><h2>Our IT Services</h2></div></FadeUp>
-          <StaggerGrid className="services-grid" staggerDelay={120} initialDelay={100}>
-            {services.map((s) => (
-              <CursorGlow key={s.title} className="service-card">
-                <div className="service-icon float-icon"><i className={`fas ${s.icon}`} /></div>
-                <h3>{s.title}</h3><p>{s.desc}</p>
-                <ul className="service-features">{s.features.map((f) => <li key={f}>{f}</li>)}</ul>
-                <Link href="/contact" className="service-link">Learn More <i className="fas fa-arrow-right" /></Link>
-              </CursorGlow>
+          <div className="services-grid">
+            {services.map((s, i) => (
+              <FadeUp key={s.title} delay={i * 120}>
+                <CursorGlow className="service-card">
+                  <div className="service-icon float-icon"><i className={`fas ${s.icon}`} /></div>
+                  <h3>{s.title}</h3><p>{s.desc}</p>
+                  <ul className="service-features">{s.features.map((f) => <li key={f}>{f}</li>)}</ul>
+                  <Link href="/contact" className="service-link">Learn More <i className="fas fa-arrow-right" /></Link>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 
@@ -121,15 +123,17 @@ export default function ITServicesPage() {
             <h2>Common Issues We Solve</h2>
             <p>From everyday tech frustrations to critical business problems, we handle it all with professional, efficient solutions.</p>
           </div></FadeUp>
-          <StaggerGrid className="content-grid" staggerDelay={90} initialDelay={100}>
-            {issues.map((issue) => (
-              <CursorGlow key={issue.title} className="content-card">
-                <div className="icon-box"><i className={`fas ${issue.icon}`} /></div>
-                <h3>{issue.title}</h3>
-                <p>{issue.desc}</p>
-              </CursorGlow>
+          <div className="content-grid">
+            {issues.map((issue, i) => (
+              <FadeUp key={issue.title} delay={i * 90}>
+                <CursorGlow className="content-card">
+                  <div className="icon-box"><i className={`fas ${issue.icon}`} /></div>
+                  <h3>{issue.title}</h3>
+                  <p>{issue.desc}</p>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 
@@ -172,14 +176,16 @@ export default function ITServicesPage() {
       <section className="page-section page-section--darker">
         <div className="container">
           <FadeUp><div className="section-header"><h2>Who We Serve</h2></div></FadeUp>
-          <StaggerGrid className="content-grid" staggerDelay={100} initialDelay={100}>
-            {clients.map((c) => (
-              <CursorGlow key={c.title} className="content-card">
-                <div className="icon-box"><i className={`fas ${c.icon}`} /></div>
-                <h3>{c.title}</h3><p>{c.desc}</p>
-              </CursorGlow>
+          <div className="content-grid">
+            {clients.map((c, i) => (
+              <FadeUp key={c.title} delay={i * 100}>
+                <CursorGlow className="content-card">
+                  <div className="icon-box"><i className={`fas ${c.icon}`} /></div>
+                  <h3>{c.title}</h3><p>{c.desc}</p>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 

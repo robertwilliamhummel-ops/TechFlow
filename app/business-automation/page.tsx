@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import FadeUp from '@/components/animations/FadeUp'
-import StaggerGrid from '@/components/animations/StaggerGrid'
+
 import SlideReveal from '@/components/animations/SlideReveal'
 import CursorGlow from '@/components/animations/CursorGlow'
 
@@ -109,14 +109,16 @@ export default function BusinessAutomationPage() {
       <section className="page-section page-section--darker">
         <div className="container">
           <FadeUp><div className="section-header"><h2>Common Problems We Solve</h2></div></FadeUp>
-          <StaggerGrid className="content-grid" staggerDelay={110} initialDelay={100}>
-            {problems.map((p) => (
-              <CursorGlow key={p.title} className="content-card">
-                <div className="icon-box"><i className={`fas ${p.icon}`} /></div>
-                <h3>{p.title}</h3><p>{p.desc}</p>
-              </CursorGlow>
+          <div className="content-grid">
+            {problems.map((p, i) => (
+              <FadeUp key={p.title} delay={i * 110}>
+                <CursorGlow className="content-card">
+                  <div className="icon-box"><i className={`fas ${p.icon}`} /></div>
+                  <h3>{p.title}</h3><p>{p.desc}</p>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 
@@ -124,14 +126,16 @@ export default function BusinessAutomationPage() {
       <section className="page-section page-section--dark">
         <div className="container">
           <FadeUp><div className="section-header"><h2>Our Approach to Business Automation</h2></div></FadeUp>
-          <StaggerGrid className="content-grid" staggerDelay={110} initialDelay={100}>
-            {approach.map((a) => (
-              <CursorGlow key={a.title} className="content-card">
-                <div className="icon-box"><i className={`fas ${a.icon}`} /></div>
-                <h3>{a.title}</h3><p>{a.desc}</p>
-              </CursorGlow>
+          <div className="content-grid">
+            {approach.map((a, i) => (
+              <FadeUp key={a.title} delay={i * 110}>
+                <CursorGlow className="content-card">
+                  <div className="icon-box"><i className={`fas ${a.icon}`} /></div>
+                  <h3>{a.title}</h3><p>{a.desc}</p>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 
@@ -139,16 +143,18 @@ export default function BusinessAutomationPage() {
       <section className="page-section page-section--darker">
         <div className="container">
           <FadeUp><div className="section-header"><h2>Automation Solutions We Build</h2></div></FadeUp>
-          <StaggerGrid className="services-grid" staggerDelay={120} initialDelay={100}>
-            {solutions.map((s) => (
-              <CursorGlow key={s.title} className="service-card">
-                <div className="service-icon float-icon"><i className={`fas ${s.icon}`} /></div>
-                <h3>{s.title}</h3><p>{s.desc}</p>
-                <ul className="service-features">{s.features.map((f) => <li key={f}>{f}</li>)}</ul>
-                <Link href="/contact" className="service-link">Request Consultation <i className="fas fa-arrow-right" /></Link>
-              </CursorGlow>
+          <div className="services-grid">
+            {solutions.map((s, i) => (
+              <FadeUp key={s.title} delay={i * 120}>
+                <CursorGlow className="service-card">
+                  <div className="service-icon float-icon"><i className={`fas ${s.icon}`} /></div>
+                  <h3>{s.title}</h3><p>{s.desc}</p>
+                  <ul className="service-features">{s.features.map((f) => <li key={f}>{f}</li>)}</ul>
+                  <Link href="/contact" className="service-link">Request Consultation <i className="fas fa-arrow-right" /></Link>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 
@@ -176,14 +182,16 @@ export default function BusinessAutomationPage() {
             <h2>Who We Serve</h2>
             <p>Business automation is ideal for service-based businesses, contractors, and companies with custom workflows that don&apos;t fit into off-the-shelf software.</p>
           </div></FadeUp>
-          <StaggerGrid className="content-grid" staggerDelay={100} initialDelay={100}>
-            {whoWeServe.map((w) => (
-              <CursorGlow key={w.title} className="content-card" style={{ textAlign:'center' }}>
-                <div className="icon-box" style={{ margin:'0 auto 1.25rem' }}><i className={`fas ${w.icon}`} /></div>
-                <h3>{w.title}</h3>
-              </CursorGlow>
+          <div className="content-grid">
+            {whoWeServe.map((w, i) => (
+              <FadeUp key={w.title} delay={i * 100}>
+                <CursorGlow className="content-card" style={{ textAlign:'center' }}>
+                  <div className="icon-box" style={{ margin:'0 auto 1.25rem' }}><i className={`fas ${w.icon}`} /></div>
+                  <h3>{w.title}</h3>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 

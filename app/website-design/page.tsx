@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import FadeUp from '@/components/animations/FadeUp'
-import StaggerGrid from '@/components/animations/StaggerGrid'
+
 import SlideReveal from '@/components/animations/SlideReveal'
 import CursorGlow from '@/components/animations/CursorGlow'
 import ContactForm from '@/components/ContactForm'
@@ -75,14 +75,16 @@ export default function WebsiteDesignPage() {
             <h2>Why Choose Our Website Design Services</h2>
             <p>We combine creativity, technology, and strategy to build websites that deliver results</p>
           </div></FadeUp>
-          <StaggerGrid className="content-grid" staggerDelay={110} initialDelay={100}>
-            {features.map((f) => (
-              <CursorGlow key={f.title} className="content-card">
-                <div className="icon-box float-icon"><i className={`fas ${f.icon}`} /></div>
-                <h3>{f.title}</h3><p>{f.desc}</p>
-              </CursorGlow>
+          <div className="content-grid">
+            {features.map((f, i) => (
+              <FadeUp key={f.title} delay={i * 110}>
+                <CursorGlow className="content-card">
+                  <div className="icon-box float-icon"><i className={`fas ${f.icon}`} /></div>
+                  <h3>{f.title}</h3><p>{f.desc}</p>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 
@@ -108,24 +110,26 @@ export default function WebsiteDesignPage() {
             <h2>Website Packages</h2>
             <p>Every project starts with a free consultation — no obligation, no pressure.</p>
           </div></FadeUp>
-          <StaggerGrid className="pricing-grid-rs" staggerDelay={120} initialDelay={100}>
-            {packages.map((pkg) => (
-              <div key={pkg.name} className={`pricing-card-glass${pkg.primary ? ' featured' : ''}`}>
-                {pkg.badge && <div className="featured-ribbon">{pkg.badge}</div>}
-                <div className="pricing-header-glass">
-                  <h3>{pkg.name}</h3>
-                  <div className="price-display">
-                    <span className="price-string">{pkg.price}</span>
+          <div className="pricing-grid-rs">
+            {packages.map((pkg, i) => (
+              <FadeUp key={pkg.name} delay={i * 120}>
+                <div className={`pricing-card-glass${pkg.primary ? ' featured' : ''}`}>
+                  {pkg.badge && <div className="featured-ribbon">{pkg.badge}</div>}
+                  <div className="pricing-header-glass">
+                    <h3>{pkg.name}</h3>
+                    <div className="price-display">
+                      <span className="price-string">{pkg.price}</span>
+                    </div>
+                    <p>{pkg.desc}</p>
                   </div>
-                  <p>{pkg.desc}</p>
+                  <ul className="pricing-features-list">
+                    {pkg.features.map((f) => <li key={f}><i className="fas fa-check" />{f}</li>)}
+                  </ul>
+                  <a href="#contact-form" className={`btn ${pkg.primary ? 'btn-primary' : 'btn-secondary'}`} style={{ width:'100%', justifyContent:'center' }}>Get Started</a>
                 </div>
-                <ul className="pricing-features-list">
-                  {pkg.features.map((f) => <li key={f}><i className="fas fa-check" />{f}</li>)}
-                </ul>
-                <a href="#contact-form" className={`btn ${pkg.primary ? 'btn-primary' : 'btn-secondary'}`} style={{ width:'100%', justifyContent:'center' }}>Get Started</a>
-              </div>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 

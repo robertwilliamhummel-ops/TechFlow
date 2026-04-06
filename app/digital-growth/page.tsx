@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import FadeUp from '@/components/animations/FadeUp'
-import StaggerGrid from '@/components/animations/StaggerGrid'
+
 import CursorGlow from '@/components/animations/CursorGlow'
 import SlideReveal from '@/components/animations/SlideReveal'
 import Accordion from '@/components/Accordion'
@@ -76,14 +76,16 @@ export default function DigitalGrowthPage() {
             <p style={{ fontSize:'1.2rem', lineHeight:1.8, color:'rgba(255,255,255,0.9)', marginBottom:'2rem' }}>
               Digital growth capabilities are included as part of website, IT, and automation projects we build. We handle technical SEO, performance optimization, and search visibility as supporting elements — not standalone marketing campaigns.
             </p>
-            <StaggerGrid style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:'1.5rem', textAlign:'left' }} staggerDelay={100} initialDelay={200}>
-              {['Included with all website projects','No standalone SEO packages sold','Honest, realistic expectations','Technical approach, not marketing hype'].map((text) => (
-                <div key={text} style={{ display:'flex', alignItems:'center', gap:'0.75rem', background:'rgba(255,255,255,0.05)', border:'1px solid rgba(255,255,255,0.1)', borderRadius:12, padding:'1rem 1.25rem' }}>
-                  <i className="fas fa-check-circle" style={{ color:'#667eea', fontSize:'1.3rem', flexShrink:0 }} />
-                  <span style={{ color:'rgba(255,255,255,0.85)', fontSize:'0.95rem' }}>{text}</span>
-                </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))', gap:'1.5rem', textAlign:'left' }}>
+              {['Included with all website projects','No standalone SEO packages sold','Honest, realistic expectations','Technical approach, not marketing hype'].map((text, i) => (
+                <FadeUp key={text} delay={i * 100}>
+                  <div style={{ display:'flex', alignItems:'center', gap:'0.75rem', background:'rgba(255,255,255,0.05)', border:'1px solid rgba(255,255,255,0.1)', borderRadius:12, padding:'1rem 1.25rem' }}>
+                    <i className="fas fa-check-circle" style={{ color:'#667eea', fontSize:'1.3rem', flexShrink:0 }} />
+                    <span style={{ color:'rgba(255,255,255,0.85)', fontSize:'0.95rem' }}>{text}</span>
+                  </div>
+                </FadeUp>
               ))}
-            </StaggerGrid>
+            </div>
           </FadeUp>
         </div>
       </section>
@@ -95,16 +97,18 @@ export default function DigitalGrowthPage() {
             <h2>Technical Capabilities We Apply</h2>
             <p>Search visibility and performance improvements applied as part of our projects</p>
           </div></FadeUp>
-          <StaggerGrid className="services-grid" staggerDelay={120} initialDelay={100}>
-            {capabilities.map((cap) => (
-              <CursorGlow key={cap.title} className="service-card">
-                <div className="service-icon float-icon"><i className={`fas ${cap.icon}`} /></div>
-                <h3>{cap.title}</h3><p>{cap.desc}</p>
-                <ul className="service-features">{cap.items.map((item) => <li key={item}>{item}</li>)}</ul>
-                <p style={{ marginTop:'1.25rem', fontWeight:600, color:'#667eea', fontSize:'0.9rem', marginBottom:0 }}>{cap.note}</p>
-              </CursorGlow>
+          <div className="services-grid">
+            {capabilities.map((cap, i) => (
+              <FadeUp key={cap.title} delay={i * 120}>
+                <CursorGlow className="service-card">
+                  <div className="service-icon float-icon"><i className={`fas ${cap.icon}`} /></div>
+                  <h3>{cap.title}</h3><p>{cap.desc}</p>
+                  <ul className="service-features">{cap.items.map((item) => <li key={item}>{item}</li>)}</ul>
+                  <p style={{ marginTop:'1.25rem', fontWeight:600, color:'#667eea', fontSize:'0.9rem', marginBottom:0 }}>{cap.note}</p>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 

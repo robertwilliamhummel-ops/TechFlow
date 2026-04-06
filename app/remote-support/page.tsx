@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/Hero'
 import FadeUp from '@/components/animations/FadeUp'
-import StaggerGrid from '@/components/animations/StaggerGrid'
+
 import SlideReveal from '@/components/animations/SlideReveal'
 import CursorGlow from '@/components/animations/CursorGlow'
 import FAQItem from '@/components/FAQItem'
@@ -98,15 +98,17 @@ export default function RemoteSupportPage() {
             <h2>How Remote Support Works</h2>
             <p>Secure remote assistance in 4 simple steps</p>
           </div></FadeUp>
-          <StaggerGrid className="steps-grid" staggerDelay={120} initialDelay={100}>
-            {steps.map((s) => (
-              <CursorGlow key={s.num} className="step-card" style={{ textAlign:'center' }}>
-                <div className="step-number-rs" style={{ margin:'0 auto 1rem' }}>{s.num}</div>
-                <div className="step-icon-rs"><i className={`fas ${s.icon}`} /></div>
-                <h3>{s.title}</h3><p>{s.desc}</p>
-              </CursorGlow>
+          <div className="steps-grid">
+            {steps.map((s, i) => (
+              <FadeUp key={s.num} delay={i * 120}>
+                <CursorGlow className="step-card" style={{ textAlign:'center' }}>
+                  <div className="step-number-rs" style={{ margin:'0 auto 1rem' }}>{s.num}</div>
+                  <div className="step-icon-rs"><i className={`fas ${s.icon}`} /></div>
+                  <h3>{s.title}</h3><p>{s.desc}</p>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 
@@ -194,15 +196,17 @@ export default function RemoteSupportPage() {
             <h2>What I Can Fix Remotely</h2>
             <p>Most business IT issues can be resolved remotely — saving you time and money without an on-site visit</p>
           </div></FadeUp>
-          <StaggerGrid className="services-grid" staggerDelay={110} initialDelay={100}>
-            {services.map((s) => (
-              <CursorGlow key={s.title} className="service-card rs-card">
-                <div className="service-icon float-icon"><i className={`fas ${s.icon}`} /></div>
-                <h3>{s.title}</h3><p>{s.desc}</p>
-                <ul>{s.items.map((item) => <li key={item}>{item}</li>)}</ul>
-              </CursorGlow>
+          <div className="services-grid">
+            {services.map((s, i) => (
+              <FadeUp key={s.title} delay={i * 110}>
+                <CursorGlow className="service-card rs-card">
+                  <div className="service-icon float-icon"><i className={`fas ${s.icon}`} /></div>
+                  <h3>{s.title}</h3><p>{s.desc}</p>
+                  <ul>{s.items.map((item) => <li key={item}>{item}</li>)}</ul>
+                </CursorGlow>
+              </FadeUp>
             ))}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 
