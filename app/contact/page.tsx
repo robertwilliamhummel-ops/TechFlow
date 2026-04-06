@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: 'How quickly can you respond when something breaks?',
-    a: 'I typically respond within 24 hours, often sooner. TechFlow Solutions operates on a project and scheduled support basis — I work evenings, weekends, and around my availability to deliver focused, quality work rather than rushed on-call responses. For businesses that need 24/7 emergency coverage, I\'ll always be upfront if a situation is outside what I can commit to.',
+    a: 'I typically respond within 8 hours, often sooner. TechFlow Solutions operates on a project and scheduled support basis — I work evenings, weekends, and around my availability to deliver focused, quality work rather than rushed on-call responses. For businesses that need 24/7 emergency coverage, I\'ll always be upfront if a situation is outside what I can commit to.',
   },
   {
     q: 'Can you handle both IT support and business automation for my company?',
