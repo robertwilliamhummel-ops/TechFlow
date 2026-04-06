@@ -12,6 +12,8 @@ interface FormData {
   email: string
   phone: string
   serviceType: string
+  websiteType: string
+  budget: string
   message: string
 }
 
@@ -22,9 +24,9 @@ interface FieldErrors {
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
-export default function ContactForm() {
+export default function ContactForm({ showWebsiteFields = false }: { showWebsiteFields?: boolean }) {
   const [formData, setFormData] = useState<FormData>({
-    name: '', email: '', phone: '', serviceType: '', message: '',
+    name: '', email: '', phone: '', serviceType: '', websiteType: '', budget: '', message: '',
   })
   const [errors, setErrors]           = useState<FieldErrors>({})
   const [loading, setLoading]         = useState(false)
@@ -82,6 +84,8 @@ export default function ContactForm() {
           email:       formData.email,
           phone:       formData.phone       || 'Not provided',
           serviceType: formData.serviceType || 'Not specified',
+          websiteType: formData.websiteType || undefined,
+          budget:      formData.budget      || undefined,
           message:     formData.message,
           _subject:    `New enquiry from ${formData.name} — TechFlow Solutions`,
         }),
@@ -113,7 +117,7 @@ export default function ContactForm() {
   // ── Reset back to blank form ─────────────────────────────────────────────────
   const handleReset = () => {
     setSubmitted(false)
-    setFormData({ name: '', email: '', phone: '', serviceType: '', message: '' })
+    setFormData({ name: '', email: '', phone: '', serviceType: '', websiteType: '', budget: '', message: '' })
     setErrors({})
     setSubmitError('')
   }
@@ -251,6 +255,41 @@ export default function ContactForm() {
                       </p>
                     </div>
                   </div>
+
+                  {/* Website-specific fields */}
+                  {showWebsiteFields && (
+                    <div className="form-row">
+                      <div className="form-group">
+                        <label htmlFor="websiteType">What type of website do you need?</label>
+                        <select
+                          id="websiteType" name="websiteType"
+                          value={formData.websiteType} onChange={handleChange}
+                        >
+                          <option value="">Select an option</option>
+                          <option value="business">Business Website</option>
+                          <option value="ecommerce">E-commerce Store</option>
+                          <option value="portfolio">Portfolio / Gallery</option>
+                          <option value="blog">Blog / News Site</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="budget">Estimated Budget</label>
+                        <select
+                          id="budget" name="budget"
+                          value={formData.budget} onChange={handleChange}
+                        >
+                          <option value="">Select budget range</option>
+                          <option value="under-1000">Under $1,000</option>
+                          <option value="1500-2500">$1,500 – $2,500</option>
+                          <option value="2500-4500">$2,500 – $4,500</option>
+                          <option value="4500-6000">$4,500 – $6,000</option>
+                          <option value="6000+">$6,000+</option>
+                        </select>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Message */}
                   <div className="form-group">

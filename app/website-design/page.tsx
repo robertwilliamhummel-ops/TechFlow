@@ -168,7 +168,7 @@ export default function WebsiteDesignPage() {
       </section>
 
       {/* Contact Form */}
-      <ContactForm />
+      <ContactForm showWebsiteFields />
 
       <section className="cta-section">
         <div className="container">
