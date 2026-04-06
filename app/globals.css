@@ -652,14 +652,6 @@ a:hover { color: var(--secondary-purple); }
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.service-card.animate-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .service-card::before {
@@ -678,9 +670,6 @@ a:hover { color: var(--secondary-purple); }
   box-shadow: 0 20px 60px rgba(102,126,234,0.3);
 }
 
-.service-card.animate-in:hover {
-  transform: translateY(-6px);
-}
 
 .service-card:hover::before { opacity: 1; }
 
@@ -766,14 +755,6 @@ a:hover { color: var(--secondary-purple); }
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 15px;
   transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.why-feature.animate-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .why-feature:hover {
@@ -782,7 +763,6 @@ a:hover { color: var(--secondary-purple); }
   box-shadow: 0 15px 40px rgba(102,126,234,0.2);
 }
 
-.why-feature.animate-in:hover { transform: translateY(-5px); }
 
 .why-icon {
   width: 60px;
@@ -822,14 +802,6 @@ a:hover { color: var(--secondary-purple); }
   border-radius: 20px;
   padding: 2.5rem;
   transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.testimonial-card.animate-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial-card:hover {
@@ -838,7 +810,6 @@ a:hover { color: var(--secondary-purple); }
   box-shadow: 0 20px 60px rgba(102,126,234,0.3);
 }
 
-.testimonial-card.animate-in:hover { transform: translateY(-6px); }
 .testimonial-rating { color: #ffd700; margin-bottom: 1rem; font-size: 1.2rem; }
 .testimonial-text { color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 1.5rem; font-style: italic; }
 .author-info h4 { color: #fff; margin-bottom: 0.25rem; }
