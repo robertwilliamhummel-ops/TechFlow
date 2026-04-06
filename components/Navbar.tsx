@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 function useScrolled(threshold = 60) {
@@ -88,8 +89,14 @@ export default function Navbar() {
             >
             <div className="nav-logo">
               <Link href="/">
-                <i className="fas fa-microchip" />
-                <span>TechFlow Solutions</span>
+                <Image
+                  src="/apple-icon.png"
+                  alt="TechFlow Solutions"
+                  width={44}
+                  height={44}
+                  className="nav-logo-img"
+                  priority
+                />
               </Link>
             </div>
 
