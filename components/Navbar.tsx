@@ -107,8 +107,8 @@ export default function Navbar() {
               role="navigation"
               aria-label="Main navigation"
             >
-              {navLinks.map((link) => (
-                <li key={link.href} className="nav-item">
+              {navLinks.map((link, i) => (
+                <li key={link.href} className="nav-item" style={{ '--item-index': i } as React.CSSProperties}>
                   <Link
                     href={link.href}
                     className={`nav-link${isActive(link.href) ? ' active' : ''}`}
@@ -119,6 +119,15 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
+              <li className="mobile-menu-footer">
+                <Link href="/contact#contact-form" className="mobile-cta-btn" onClick={() => setMenuOpen(false)}>
+                  <i className="fas fa-calendar-check" /> Book Free Consultation
+                </Link>
+                <a href="tel:+16475728341" className="mobile-phone-link">
+                  <i className="fas fa-phone" /> (647) 572-8341
+                </a>
+                <p className="mobile-tagline">IT Services · Automation · Websites</p>
+              </li>
             </ul>
 
             {/* CTA button */}
