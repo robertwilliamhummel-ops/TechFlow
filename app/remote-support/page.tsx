@@ -48,35 +48,9 @@ const services = [
   { icon:'fa-headset',       title:'Ongoing IT Support & Training',        desc:'Technical guidance, software training, best practices, and troubleshooting — ongoing support to keep your team productive.', items:['Software training and guidance','IT best practices and recommendations','Troubleshooting and diagnostics','Technical documentation','Proactive monitoring and maintenance'] },
 ]
 
-const pricingPlans = [
-  {
-    name:'Standard Remote IT Support',
-    price:'125', period:'/hour',
-    desc:'For routine business IT issues, software troubleshooting, and workstation support. Many common issues resolved quickly.',
-    featured:false,
-    items:['Email and workspace issues','Software configuration and troubleshooting','Cloud access and sync problems','Network connectivity issues','No travel fees or commute charges','Billed in 15-min increments after first hour'],
-    cta:{ label:'Download & Get Started', href:DOWNLOAD_URL, download:true },
-  },
-  {
-    name:'Business-Critical Support',
-    price:'175', period:'/hour',
-    desc:'Priority response for urgent issues affecting your business operations. After-hours availability and fast connection times.',
-    featured:true, ribbon:'PRIORITY',
-    items:['After-hours and weekend availability','Priority connection and response','Urgent issue resolution','Business-critical system problems','Priority response based on availability','Direct line during session'],
-    cta:{ label:'Call Now — (647) 572-8341', href:'tel:+16475728341', download:false },
-  },
-  {
-    name:'Managed IT Clients',
-    priceDisplay:'Included',
-    desc:'Flexible monthly plans with included or heavily discounted remote support. Proactive monitoring and unlimited support available.',
-    featured:false,
-    items:['Flexible monthly IT support plans','Remote support included or discounted','Proactive system monitoring','Priority support access','Reduced hourly rates','Predictable monthly billing'],
-    cta:{ label:'Contact Me', href:'/contact', download:false },
-  },
-]
 
 const faqs = [
-  { q:'Is remote support secure?', a:'Yes — I use TechFlow Remote Support, which is built on enterprise-grade RustDesk infrastructure hosted on my own secure server. All sessions use end-to-end encryption with TLS 1.3 and RSA 2048 asymmetric key exchange. Your data never passes through third-party servers, and you maintain full control over what I can access during each session. Technical security documentation is available on request for compliance purposes.' },
+  { q:'Is remote support secure?', a:'Yes — I use TechFlow Remote Support, which is built on MeshCentral — an enterprise-grade, open-source remote management platform hosted on my own secure server. All sessions use end-to-end encryption with TLS 1.3 and RSA 2048 asymmetric key exchange. Your data never passes through third-party servers, and you maintain full control over what I can access during each session. Technical security documentation is available on request for compliance purposes.' },
   { q:'Can you help with Microsoft 365 and Google Workspace?', a:"Absolutely — I specialize in Microsoft 365 and Google Workspace environments. This includes email setup and migration, SharePoint and OneDrive configuration, user management, licensing, security settings, and troubleshooting sync issues." },
   { q:'Do you support teams and multiple users?', a:'Yes — I support multi-user environments and distributed teams regularly. Whether your team works in-office, remotely, or hybrid, I can provide remote support to any workstation with an internet connection.' },
   { q:'How quickly can you respond to IT issues?', a:'Most remote support requests are handled within 2 hours during business hours (9AM–5PM weekdays). Business-critical issues receive priority response, often within 30–60 minutes. After-hours and weekend support is available at the priority rate of $175/hour.' },
@@ -229,50 +203,6 @@ export default function RemoteSupportPage() {
               </CursorGlow>
             ))}
           </StaggerGrid>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="page-section page-section--darker">
-        <div className="container">
-          <FadeUp><div className="section-header">
-            <h2>Remote Support Rates</h2>
-            <p>Professional business IT support without travel fees or commute charges</p>
-          </div></FadeUp>
-          <StaggerGrid className="pricing-grid-rs" staggerDelay={130} initialDelay={100}>
-            {pricingPlans.map((plan) => (
-              <div key={plan.name} className={`pricing-card-glass${plan.featured ? ' featured' : ''}`}>
-                {plan.ribbon && <div className="featured-ribbon">{plan.ribbon}</div>}
-                <div className="pricing-header-glass">
-                  <h3>{plan.name}</h3>
-                  <div className="price-display">
-                    {plan.priceDisplay
-                      ? <span className="price-included">{plan.priceDisplay}</span>
-                      : <><span className="price-currency">$</span><span className="price-amount">{plan.price}</span><span className="price-period">{plan.period}</span></>
-                    }
-                  </div>
-                  <p>{plan.desc}</p>
-                </div>
-                <ul className="pricing-features-list">
-                  {plan.items.map((item) => <li key={item}><i className="fas fa-check" />{item}</li>)}
-                </ul>
-                {plan.cta.download
-                  ? <a href={plan.cta.href} download className="btn btn-primary" style={{ width:'100%', justifyContent:'center' }}><i className="fas fa-download" /> {plan.cta.label}</a>
-                  : plan.cta.href.startsWith('tel:')
-                    ? <a href={plan.cta.href} className="btn btn-secondary" style={{ width:'100%', justifyContent:'center' }}><i className="fas fa-phone" /> {plan.cta.label}</a>
-                    : <Link href={plan.cta.href} className="btn btn-primary" style={{ width:'100%', justifyContent:'center' }}><i className="fas fa-envelope" /> {plan.cta.label}</Link>
-                }
-              </div>
-            ))}
-          </StaggerGrid>
-          <FadeUp delay={200}>
-            <div className="pricing-note-rs">
-              <p>
-                <i className="fas fa-info-circle" />
-                All sessions use end-to-end encrypted connections. Billed in 15-minute increments after the first hour. Payment accepted via e-transfer, credit card, or invoice for business accounting.
-              </p>
-            </div>
-          </FadeUp>
         </div>
       </section>
 
