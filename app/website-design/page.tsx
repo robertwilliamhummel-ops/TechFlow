@@ -99,12 +99,40 @@ export default function WebsiteDesignPage() {
         </section>
       </SlideReveal>
 
-      {/* Pricing */}
+      {/* Launch Package Bundle */}
       <section className="page-section page-section--darker">
+        <div className="container" style={{ maxWidth: 850 }}>
+          <FadeUp>
+            <div style={{ background: 'rgba(102,126,234,0.08)', border: '1px solid rgba(102,126,234,0.35)', borderRadius: 24, padding: 'clamp(2rem, 5vw, 3rem)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', top: '1.5rem', right: 0, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: '#fff', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.08em', padding: '0.35rem 1.1rem 0.35rem 0.9rem', borderRadius: '4px 0 0 4px' }}>BEST VALUE</div>
+              <h2 style={{ color: '#fff', fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', marginBottom: '0.5rem' }}>Launch Package: Website + InvoicePro</h2>
+              <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '0.3rem', margin: '1rem 0' }}>
+                <span style={{ fontSize: 'clamp(2.2rem, 5vw, 3rem)', fontWeight: 800, color: '#fff', lineHeight: 1 }}>$1,000</span>
+                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1rem', paddingBottom: '0.3rem' }}>one-time</span>
+              </div>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: 600, margin: '0 auto 1.5rem' }}>
+                Professional website + a full invoicing and quoting system configured for your business. Perfect for trades, contractors, and service businesses ready to look professional and get paid faster.
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem 1.25rem', marginBottom: '2rem', color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
+                {['4+ page website', 'Mobile responsive', 'SEO ready', 'InvoicePro invoicing system', 'Client portal', 'Your branding', 'Training included', '1 month support'].map((f) => (
+                  <span key={f}><i className="fas fa-check" style={{ color: '#667eea', marginRight: '0.35rem' }} />{f}</span>
+                ))}
+              </div>
+              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                <Link href="/invoicepro" className="btn btn-secondary"><i className="fas fa-external-link-alt" /> See InvoicePro in Action</Link>
+                <Link href="/contact" className="btn btn-primary"><i className="fas fa-calendar-check" /> Get Started — Free Consultation</Link>
+              </div>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="page-section page-section--dark">
         <div className="container">
           <FadeUp><div className="section-header">
-            <h2>Website Packages</h2>
-            <p>Every project starts with a free consultation — no obligation, no pressure.</p>
+            <h2>Website-Only Packages</h2>
+            <p>Just need a website? Every project starts with a free consultation — no obligation, no pressure.</p>
           </div></FadeUp>
           <div className="pricing-grid-rs">
             {packages.map((pkg, i) => (

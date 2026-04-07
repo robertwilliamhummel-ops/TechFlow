@@ -41,7 +41,6 @@ const approach = [
 ]
 
 const solutions = [
-  { icon: 'fa-file-invoice-dollar', title: 'InvoicePro: Mobile-First Invoicing',  desc: 'A complete invoicing solution purpose-built for field service businesses. Built on React, Firebase, Stripe, and Cloud Run.', features: ['Mobile-first invoice creation','Automated payment reminders','Client management portal','Financial reporting dashboard','Stripe payment integration'] },
   { icon: 'fa-diagram-project',     title: 'Custom Workflow Automation',          desc: 'Eliminate manual handoffs between systems and automate repetitive steps.',  features: ['Multi-system data sync','Automated notifications & alerts','Approval workflow automation','Document generation','Status tracking dashboards'] },
   { icon: 'fa-user-shield',         title: 'Authentication & User Systems',       desc: 'Secure login, user roles, and access control built into your custom tools.', features: ['Multi-user role management','Secure authentication','Client portal access','Session management','Audit trail logging'] },
   { icon: 'fa-credit-card',         title: 'Payment Integration',                 desc: 'Accept payments directly through your custom tools with Stripe and PayPal.',  features: ['Stripe & PayPal integration','Automated payment processing','Invoice payment tracking','Refund management','Financial reconciliation'] },
@@ -138,10 +137,38 @@ export default function BusinessAutomationPage() {
         </div>
       </section>
 
-      {/* Solutions */}
+      {/* InvoicePro — flagship product */}
       <section className="page-section page-section--darker">
+        <div className="container" style={{ maxWidth: 950 }}>
+          <SlideReveal direction="left" duration={700}>
+            <div style={{ background: 'rgba(102,126,234,0.08)', border: '1px solid rgba(102,126,234,0.35)', borderRadius: 24, padding: 'clamp(2rem, 5vw, 3rem)', position: 'relative', overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', top: '1.5rem', right: 0, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: '#fff', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.08em', padding: '0.35rem 1.1rem 0.35rem 0.9rem', borderRadius: '4px 0 0 4px' }}>READY TO DEPLOY</div>
+              <h2 style={{ color: '#fff', fontSize: 'clamp(1.5rem, 3vw, 2rem)', marginBottom: '1rem' }}><i className="fas fa-file-invoice-dollar" style={{ color: '#667eea', marginRight: '0.75rem' }} />InvoicePro — Invoicing for Service Businesses</h2>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.05rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+                Our ready-to-deploy invoicing and quoting platform — built for contractors, trades, and service businesses. Professional invoicing, one-click quote-to-invoice conversion, recurring billing, client portal, and a service calculator pre-loaded with your rates. Configured with your branding and deployed on your domain.
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem 1.5rem', marginBottom: '1.5rem', color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
+                {['Invoicing & PDF generation', 'Quotes with one-click conversion', 'Recurring billing', 'Client portal', 'Customer CRM', 'Mobile friendly', 'Unlimited users', '$0 monthly fees'].map((f) => (
+                  <span key={f}><i className="fas fa-check" style={{ color: '#667eea', marginRight: '0.4rem' }} />{f}</span>
+                ))}
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+                <div>
+                  <span style={{ fontSize: '1.8rem', fontWeight: 800, color: '#fff' }}>$1,000</span>
+                  <span style={{ color: 'rgba(255,255,255,0.5)', marginLeft: '0.4rem' }}>with website</span>
+                </div>
+                <Link href="/invoicepro" className="btn btn-primary"><i className="fas fa-arrow-right" /> Learn More &amp; Try Demo</Link>
+                <Link href="/contact" className="btn btn-outline">Get Started</Link>
+              </div>
+            </div>
+          </SlideReveal>
+        </div>
+      </section>
+
+      {/* Custom Solutions */}
+      <section className="page-section page-section--dark">
         <div className="container">
-          <FadeUp><div className="section-header"><h2>Automation Solutions We Build</h2></div></FadeUp>
+          <FadeUp><div className="section-header"><h2>Custom Automation Solutions</h2><p>Need something built from scratch? Custom projects start at $3,500.</p></div></FadeUp>
           <div className="services-grid">
             {solutions.map((s, i) => (
               <FadeUp key={s.title} delay={i * 120}>

@@ -83,12 +83,12 @@ export default function HomePage() {
                 <h3>Business Automation</h3>
                 <p>Custom automation tools that streamline your operations and save hours every week. From invoicing to workflow management.</p>
                 <ul className="service-features">
-                  <li>Custom Invoicing Systems</li>
+                  <li>InvoicePro — invoicing &amp; quotes from $1,000</li>
                   <li>Payment Processing Integration</li>
                   <li>Workflow Automation Tools</li>
                   <li>Client Portal Development</li>
                 </ul>
-                <Link href="/contact" className="service-link">Request Consultation <i className="fas fa-arrow-right" /></Link>
+                <Link href="/invoicepro" className="service-link">See InvoicePro <i className="fas fa-arrow-right" /></Link>
               </CursorGlow>
             </FadeUp>
             <FadeUp delay={120}>
