@@ -279,6 +279,9 @@ a:hover { color: var(--secondary-purple); }
 .hamburger.active .bar:nth-child(2) { opacity: 0; }
 .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
+/* Hidden on desktop — only visible inside mobile slide-in menu */
+.mobile-menu-footer { display: none; }
+
 .mobile-menu-backdrop {
   position: fixed;
   inset: 0;
