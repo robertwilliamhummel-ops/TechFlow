@@ -78,8 +78,7 @@ const localBusinessSchema = {
   priceRange: '$$',
   openingHours: ['Mo-Fr 09:00-18:00', 'Sa-Su 08:00-20:00'],
   sameAs: [
-    'https://facebook.com/techflowsolutions',
-    'https://linkedin.com/company/techflowsolutions',
+    'https://share.google/JQQ61Sg3nnPeTgXCQ',
   ],
 }
 
@@ -89,7 +88,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en-CA" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         {/* Font Awesome */}
         <link

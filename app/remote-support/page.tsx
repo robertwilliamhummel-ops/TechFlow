@@ -58,9 +58,26 @@ const faqs = [
   { q:'What payment methods do you accept?', a:"I accept e-transfer (preferred), all major credit cards, cash, and can provide invoices for business accounting purposes. Payment is due upon completion of service for hourly work, or monthly via automatic billing for managed IT clients." },
 ]
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.a,
+    },
+  })),
+}
+
 export default function RemoteSupportPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero sectionClass="hero-remote" images={heroImages}>
         <div className="hero-content">
           <h1 className="hero-title" style={{ animation: 'fadeInUp 0.7s ease both' }}>

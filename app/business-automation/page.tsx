@@ -97,6 +97,9 @@ export default function BusinessAutomationPage() {
                 Invoicing systems • Payment processing • Client portals • Workflow tools • Data synchronization • Process automation • Custom dashboards • Integration between systems
               </p>
             </div>
+            <p style={{ color:'rgba(255,255,255,0.5)', fontSize:'0.95rem', marginTop:'1.25rem' }}>
+              Projects are custom-scoped and typically start at <strong style={{ color:'rgba(255,255,255,0.8)' }}>$3,500</strong>. Every engagement begins with a free consultation — no obligation.
+            </p>
           </FadeUp>
         </div>
       </section>
@@ -195,7 +198,7 @@ export default function BusinessAutomationPage() {
         <div className="container">
           <FadeUp><div className="cta-content">
             <h2>Ready to Automate Your Business?</h2>
-            <p>Let&apos;s discuss your specific automation needs and design a solution that works for you.</p>
+            <p>Let&apos;s discuss your specific automation needs and design a solution that works for you. Custom projects typically start at $3,500 — consultation is always free.</p>
             <div className="cta-buttons">
               <Link href="/contact" className="btn btn-primary btn-large"><i className="fas fa-calendar-check" /> Request Automation Consultation</Link>
               <a href="tel:+16475728341" className="btn btn-outline btn-large"><i className="fas fa-phone" /> Call (647) 572-8341</a>

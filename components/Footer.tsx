@@ -13,10 +13,9 @@ export default function Footer() {
             </div>
             <p>IT services and business automation for Toronto companies.</p>
             <div className="footer-social">
-              <a href="#" aria-label="Facebook"><i className="fab fa-facebook" /></a>
-              <a href="#" aria-label="Twitter"><i className="fab fa-twitter" /></a>
-              <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin" /></a>
-              <a href="#" aria-label="Google Business"><i className="fab fa-google" /></a>
+              <span className="social-placeholder" aria-label="Facebook"><i className="fab fa-facebook" /></span>
+              <span className="social-placeholder" aria-label="LinkedIn"><i className="fab fa-linkedin" /></span>
+              <a href="https://share.google/JQQ61Sg3nnPeTgXCQ" target="_blank" rel="noopener noreferrer" aria-label="Google Business"><i className="fab fa-google" /></a>
             </div>
           </div>
 

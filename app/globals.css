@@ -1048,6 +1048,19 @@ a:hover { color: var(--secondary-purple); }
   transform: translateY(-3px);
 }
 
+.footer-social .social-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.25);
+  font-size: 1rem;
+}
+
 .contact-info p {
   display: flex;
   align-items: flex-start;
