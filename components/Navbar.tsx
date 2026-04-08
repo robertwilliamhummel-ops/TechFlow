@@ -17,7 +17,7 @@ function useScrolled(threshold = 60) {
 const navLinks = [
   { href: '/', label: 'Home', icon: 'fa-house' },
   { href: '/it-services', label: 'IT Services', icon: 'fa-server' },
-  { href: '/business-automation', label: 'Automation', icon: 'fa-cogs' },
+  { href: '/invoicepro', label: 'InvoicePro', icon: 'fa-file-invoice-dollar' },
   { href: '/website-design', label: 'Websites', icon: 'fa-globe' },
   { href: '/about', label: 'About', icon: 'fa-user' },
   { href: '/contact', label: 'Contact', icon: 'fa-envelope' },

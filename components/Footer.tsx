@@ -25,6 +25,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/it-services">IT Services</Link></li>
               <li><Link href="/business-automation">Automation</Link></li>
+              <li><Link href="/invoicepro">InvoicePro</Link></li>
               <li><Link href="/website-design">Websites</Link></li>
               <li><Link href="/digital-growth">Digital Growth</Link></li>
               <li><Link href="/remote-support">Remote Support</Link></li>
