@@ -17,6 +17,7 @@ function useScrolled(threshold = 60) {
 const navLinks = [
   { href: '/', label: 'Home', icon: 'fa-house' },
   { href: '/it-services', label: 'IT Services', icon: 'fa-server' },
+  { href: '/business-automation', label: 'Automation', icon: 'fa-cogs', className: 'mobile-extra-link' },
   { href: '/invoicepro', label: 'InvoicePro', icon: 'fa-file-invoice-dollar' },
   { href: '/website-design', label: 'Websites', icon: 'fa-globe' },
   { href: '/about', label: 'About', icon: 'fa-user' },
@@ -108,7 +109,7 @@ export default function Navbar() {
               aria-label="Main navigation"
             >
               {navLinks.map((link, i) => (
-                <li key={link.href} className="nav-item" style={{ '--item-index': i } as React.CSSProperties}>
+                <li key={link.href} className={`nav-item${link.className ? ` ${link.className}` : ''}`} style={{ '--item-index': i } as React.CSSProperties}>
                   <Link
                     href={link.href}
                     className={`nav-link${isActive(link.href) ? ' active' : ''}`}
@@ -119,16 +120,6 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
-              <li className="mobile-extra-link" style={{ '--item-index': navLinks.length } as React.CSSProperties}>
-                <Link
-                  href="/business-automation"
-                  className={`nav-link${isActive('/business-automation') ? ' active' : ''}`}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  <i className="fas fa-cogs" />
-                  Automation
-                </Link>
-              </li>
               <li className="mobile-menu-footer">
                 <Link href="/contact#contact-form" className="mobile-cta-btn" onClick={() => setMenuOpen(false)}>
                   <i className="fas fa-calendar-check" /> Book Free Consultation
