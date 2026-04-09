@@ -8,7 +8,7 @@ import CursorGlow from '@/components/animations/CursorGlow'
 
 export const metadata: Metadata = {
   title: 'InvoicePro — Invoicing & Quote System for Service Businesses | TechFlow Solutions',
-  description: 'Professional invoicing, quoting, and client management built for contractors, trades, and service businesses in Toronto. Mobile-friendly, recurring billing, one-click quote-to-invoice conversion. Launch Package from $1,000.',
+  description: 'Professional invoicing, quoting, and client management built for contractors, trades, and service businesses in Toronto. Mobile-friendly, recurring billing, one-click quote-to-invoice conversion. Launch Package from $999.',
   alternates: { canonical: 'https://techflowsolutions.ca/invoicepro' },
   openGraph: {
     title: 'InvoicePro — Invoicing & Quote System for Service Businesses',
@@ -103,18 +103,29 @@ export default function InvoiceProPage() {
         </div>
       </section>
 
-      {/* Screenshots placeholder */}
-      {/* TODO: Add screenshots section when images are ready
+      {/* Pain Points — leads with emotion before logic */}
       <section className="page-section page-section--darker">
         <div className="container">
-          <FadeUp><div className="section-header"><h2>See It in Action</h2></div></FadeUp>
-          -- screenshot grid here --
+          <FadeUp><div className="section-header">
+            <h2>Still Invoicing with Excel or Word?</h2>
+            <p>Here&apos;s what changes when you switch to InvoicePro</p>
+          </div></FadeUp>
+          <div className="content-grid">
+            {whyNotSpreadsheets.map((item, i) => (
+              <FadeUp key={item.problem} delay={i * 100}>
+                <CursorGlow className="content-card">
+                  <div className="icon-box"><i className={`fas ${item.icon}`} /></div>
+                  <h3 style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)', fontWeight: 400, textDecoration: 'line-through', marginBottom: '0.5rem' }}>{item.problem}</h3>
+                  <p style={{ color: '#fff', fontWeight: 500 }}>{item.solution}</p>
+                </CursorGlow>
+              </FadeUp>
+            ))}
+          </div>
         </div>
       </section>
-      */}
 
-      {/* Core Features */}
-      <section className="page-section page-section--darker">
+      {/* Core Features — detailed proof after pain */}
+      <section className="page-section page-section--dark">
         <div className="container">
           <FadeUp><div className="section-header">
             <h2>Everything You Need to Get Paid Faster</h2>
@@ -128,27 +139,6 @@ export default function InvoiceProPage() {
                   <h3>{f.title}</h3>
                   <p>{f.desc}</p>
                   <ul className="service-features">{f.highlights.map((h) => <li key={h}>{h}</li>)}</ul>
-                </CursorGlow>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Not Spreadsheets */}
-      <section className="page-section page-section--dark">
-        <div className="container">
-          <FadeUp><div className="section-header">
-            <h2>Still Invoicing with Excel or Word?</h2>
-            <p>Here&apos;s what changes when you switch to InvoicePro</p>
-          </div></FadeUp>
-          <div className="content-grid">
-            {whyNotSpreadsheets.map((item, i) => (
-              <FadeUp key={item.problem} delay={i * 100}>
-                <CursorGlow className="content-card">
-                  <div className="icon-box"><i className={`fas ${item.icon}`} /></div>
-                  <h3 style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)', fontWeight: 400, textDecoration: 'line-through', marginBottom: '0.5rem' }}>{item.problem}</h3>
-                  <p style={{ color: '#fff', fontWeight: 500 }}>{item.solution}</p>
                 </CursorGlow>
               </FadeUp>
             ))}
@@ -180,26 +170,23 @@ export default function InvoiceProPage() {
       <section className="page-section page-section--dark">
         <div className="container" style={{ maxWidth: 700 }}>
           <FadeUp>
-            <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(102,126,234,0.4)', borderRadius: 24, padding: 'clamp(2rem, 5vw, 3.5rem)', position: 'relative', overflow: 'hidden' }}>
-              <div style={{ position: 'absolute', top: '1.5rem', right: 0, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: '#fff', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.08em', padding: '0.35rem 1.1rem 0.35rem 0.9rem', borderRadius: '4px 0 0 4px' }}>LAUNCH PACKAGE</div>
-              <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <h2 style={{ color: '#fff', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', marginBottom: '0.5rem' }}>Website + InvoicePro</h2>
-                <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '0.3rem', marginBottom: '0.75rem' }}>
-                  <span style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', fontWeight: 800, color: '#fff', lineHeight: 1 }}>$1,000</span>
-                  <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1rem', paddingBottom: '0.4rem' }}>one-time</span>
+            <div className="pricing-card-glass featured">
+              <div className="featured-ribbon">LAUNCH PACKAGE</div>
+              <div className="pricing-header-glass" style={{ textAlign: 'center' }}>
+                <h3 style={{ paddingRight: 0 }}>Website + InvoicePro</h3>
+                <div className="price-display" style={{ justifyContent: 'center' }}>
+                  <span className="price-string" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)' }}>$999</span>
+                  <span className="price-period">one-time</span>
                 </div>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1rem' }}>Professional website + full invoicing system, deployed and ready to use</p>
+                <p>Professional website + full invoicing system, deployed and ready to use</p>
               </div>
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem' }}>
+              <ul className="pricing-features-list">
                 {includedInLaunch.map((item) => (
-                  <li key={item} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', padding: '0.5rem 0', color: 'rgba(255,255,255,0.85)', fontSize: '0.95rem' }}>
-                    <i className="fas fa-check" style={{ color: '#667eea', marginTop: '0.2rem', flexShrink: 0 }} />
-                    {item}
-                  </li>
+                  <li key={item}><i className="fas fa-check" />{item}</li>
                 ))}
               </ul>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', alignItems: 'center' }}>
-                <Link href="/contact" className="btn btn-primary btn-large" style={{ width: '100%', justifyContent: 'center' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <Link href="/contact" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
                   <i className="fas fa-calendar-check" /> Get Started — Free Consultation
                 </Link>
                 <a href="tel:+16475728341" className="btn btn-outline" style={{ width: '100%', justifyContent: 'center' }}>
@@ -208,34 +195,6 @@ export default function InvoiceProPage() {
               </div>
             </div>
           </FadeUp>
-        </div>
-      </section>
-
-      {/* Who It's For */}
-      <section className="page-section page-section--darker">
-        <div className="container">
-          <FadeUp><div className="section-header">
-            <h2>Built For</h2>
-            <p>InvoicePro works for any service business that sends invoices and quotes</p>
-          </div></FadeUp>
-          <div className="content-grid">
-            {[
-              { icon: 'fa-hard-hat', title: 'Contractors & Trades', desc: 'Plumbers, electricians, HVAC, roofers — invoice from the job site, track payments, send quotes on the spot.' },
-              { icon: 'fa-broom', title: 'Cleaning & Maintenance', desc: 'Recurring invoices for regular clients, one-off quotes for new jobs, all from your phone.' },
-              { icon: 'fa-truck', title: 'Mobile Service Providers', desc: 'Landscapers, movers, delivery — create invoices between stops, get paid faster.' },
-              { icon: 'fa-briefcase', title: 'Consultants & Freelancers', desc: 'Track billable hours, send professional quotes, convert to invoices when approved.' },
-              { icon: 'fa-wrench', title: 'Auto & Equipment Repair', desc: 'Parts and labour on one invoice, service presets for common jobs, material tracking.' },
-              { icon: 'fa-concierge-bell', title: 'Any Service Business', desc: 'If you send invoices and quotes, InvoicePro replaces your spreadsheets with something professional.' },
-            ].map((w, i) => (
-              <FadeUp key={w.title} delay={i * 100}>
-                <CursorGlow className="content-card">
-                  <div className="icon-box"><i className={`fas ${w.icon}`} /></div>
-                  <h3>{w.title}</h3>
-                  <p>{w.desc}</p>
-                </CursorGlow>
-              </FadeUp>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -260,7 +219,7 @@ export default function InvoiceProPage() {
         <div className="container">
           <FadeUp><div className="cta-content">
             <h2>Ready to Stop Chasing Spreadsheets?</h2>
-            <p>Get a professional website and InvoicePro configured for your business — $1,000, one-time, no monthly fees.</p>
+            <p>Get a professional website and InvoicePro configured for your business — $999, one-time, no monthly fees.</p>
             <div className="cta-buttons">
               <Link href="/contact" className="btn btn-primary btn-large"><i className="fas fa-calendar-check" /> Book Free Consultation</Link>
               <a href="https://demo.techflowsolutions.ca" target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-large"><i className="fas fa-external-link-alt" /> Try the Demo</a>

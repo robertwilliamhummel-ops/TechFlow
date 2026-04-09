@@ -154,7 +154,7 @@ export default function BusinessAutomationPage() {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
                 <div>
-                  <span style={{ fontSize: '1.8rem', fontWeight: 800, color: '#fff' }}>$1,000</span>
+                  <span className="price-string" style={{ fontSize: '1.8rem', display: 'inline' }}>$999</span>
                   <span style={{ color: 'rgba(255,255,255,0.5)', marginLeft: '0.4rem' }}>with website</span>
                 </div>
                 <Link href="/invoicepro" className="btn btn-primary"><i className="fas fa-arrow-right" /> Learn More &amp; Try Demo</Link>

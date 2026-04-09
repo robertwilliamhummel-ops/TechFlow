@@ -83,7 +83,7 @@ export default function HomePage() {
                 <h3>Business Automation</h3>
                 <p>Custom automation tools that streamline your operations and save hours every week. From invoicing to workflow management.</p>
                 <ul className="service-features">
-                  <li>InvoicePro — invoicing &amp; quotes from $1,000</li>
+                  <li>InvoicePro — invoicing &amp; quotes from $999</li>
                   <li>Payment Processing Integration</li>
                   <li>Workflow Automation Tools</li>
                   <li>Client Portal Development</li>

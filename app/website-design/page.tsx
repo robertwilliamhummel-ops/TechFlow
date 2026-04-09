@@ -107,8 +107,8 @@ export default function WebsiteDesignPage() {
               <div style={{ position: 'absolute', top: '1.5rem', right: 0, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: '#fff', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.08em', padding: '0.35rem 1.1rem 0.35rem 0.9rem', borderRadius: '4px 0 0 4px' }}>BEST VALUE</div>
               <h2 style={{ color: '#fff', fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', marginBottom: '0.5rem' }}>Launch Package: Website + InvoicePro</h2>
               <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '0.3rem', margin: '1rem 0' }}>
-                <span style={{ fontSize: 'clamp(2.2rem, 5vw, 3rem)', fontWeight: 800, color: '#fff', lineHeight: 1 }}>$1,000</span>
-                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1rem', paddingBottom: '0.3rem' }}>one-time</span>
+                <span className="price-string" style={{ fontSize: 'clamp(2.2rem, 5vw, 3rem)' }}>$999</span>
+                <span className="price-period">one-time</span>
               </div>
               <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: 600, margin: '0 auto 1.5rem' }}>
                 Professional website + a full invoicing and quoting system configured for your business. Perfect for trades, contractors, and service businesses ready to look professional and get paid faster.
