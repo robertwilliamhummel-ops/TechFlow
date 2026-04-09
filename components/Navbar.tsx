@@ -119,6 +119,16 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
+              <li className="mobile-extra-link" style={{ '--item-index': navLinks.length } as React.CSSProperties}>
+                <Link
+                  href="/business-automation"
+                  className={`nav-link${isActive('/business-automation') ? ' active' : ''}`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <i className="fas fa-cogs" />
+                  Automation
+                </Link>
+              </li>
               <li className="mobile-menu-footer">
                 <Link href="/contact#contact-form" className="mobile-cta-btn" onClick={() => setMenuOpen(false)}>
                   <i className="fas fa-calendar-check" /> Book Free Consultation

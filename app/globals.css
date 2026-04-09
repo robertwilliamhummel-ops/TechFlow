@@ -281,6 +281,7 @@ a:hover { color: var(--secondary-purple); }
 
 /* Hidden on desktop — only visible inside mobile slide-in menu */
 .mobile-menu-footer { display: none; }
+.mobile-extra-link { display: none; }
 
 .mobile-menu-backdrop {
   position: fixed;
@@ -371,6 +372,22 @@ a:hover { color: var(--secondary-purple); }
     width: 20px;
     text-align: center;
     color: #667eea;
+  }
+
+  /* Extra mobile-only nav links */
+  .mobile-extra-link {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition-delay: calc(var(--item-index, 0) * 0.07s);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .nav-menu.active .mobile-extra-link {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   /* Footer section inside mobile menu */
